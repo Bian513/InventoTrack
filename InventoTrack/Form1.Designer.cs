@@ -38,9 +38,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.categoryTextBox = new System.Windows.Forms.Label();
-            this.priceTextBox = new System.Windows.Forms.Label();
-            this.quantityTextBox = new System.Windows.Forms.Label();
+            this.categoryBox = new System.Windows.Forms.Label();
+            this.priceNumericUpdown = new System.Windows.Forms.Label();
+            this.quantityNumericUpDown = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -168,45 +168,45 @@
             this.numericUpDown2.Tag = "";
             this.numericUpDown2.ThousandsSeparator = true;
             // 
-            // categoryTextBox
+            // categoryBox
             // 
-            this.categoryTextBox.AutoSize = true;
-            this.categoryTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryTextBox.Location = new System.Drawing.Point(13, 85);
-            this.categoryTextBox.Name = "categoryTextBox";
-            this.categoryTextBox.Size = new System.Drawing.Size(100, 25);
-            this.categoryTextBox.TabIndex = 20;
-            this.categoryTextBox.Text = "Category";
-            this.categoryTextBox.Click += new System.EventHandler(this.label2_Click_1);
+            this.categoryBox.AutoSize = true;
+            this.categoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryBox.Location = new System.Drawing.Point(13, 85);
+            this.categoryBox.Name = "categoryBox";
+            this.categoryBox.Size = new System.Drawing.Size(100, 25);
+            this.categoryBox.TabIndex = 20;
+            this.categoryBox.Text = "Category";
+            this.categoryBox.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // priceTextBox
+            // priceNumericUpdown
             // 
-            this.priceTextBox.AutoSize = true;
-            this.priceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTextBox.Location = new System.Drawing.Point(704, 25);
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(61, 25);
-            this.priceTextBox.TabIndex = 21;
-            this.priceTextBox.Text = "Price";
+            this.priceNumericUpdown.AutoSize = true;
+            this.priceNumericUpdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceNumericUpdown.Location = new System.Drawing.Point(704, 25);
+            this.priceNumericUpdown.Name = "priceNumericUpdown";
+            this.priceNumericUpdown.Size = new System.Drawing.Size(61, 25);
+            this.priceNumericUpdown.TabIndex = 21;
+            this.priceNumericUpdown.Text = "Price";
             // 
-            // quantityTextBox
+            // quantityNumericUpDown
             // 
-            this.quantityTextBox.AutoSize = true;
-            this.quantityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityTextBox.Location = new System.Drawing.Point(704, 85);
-            this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(93, 25);
-            this.quantityTextBox.TabIndex = 22;
-            this.quantityTextBox.Text = "Quantity";
+            this.quantityNumericUpDown.AutoSize = true;
+            this.quantityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityNumericUpDown.Location = new System.Drawing.Point(704, 85);
+            this.quantityNumericUpDown.Name = "quantityNumericUpDown";
+            this.quantityNumericUpDown.Size = new System.Drawing.Size(93, 25);
+            this.quantityNumericUpDown.TabIndex = 22;
+            this.quantityNumericUpDown.Text = "Quantity";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 598);
-            this.Controls.Add(this.quantityTextBox);
-            this.Controls.Add(this.priceTextBox);
-            this.Controls.Add(this.categoryTextBox);
+            this.Controls.Add(this.quantityNumericUpDown);
+            this.Controls.Add(this.priceNumericUpdown);
+            this.Controls.Add(this.categoryBox);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox1);
@@ -241,9 +241,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label categoryTextBox;
-        private System.Windows.Forms.Label priceTextBox;
-        private System.Windows.Forms.Label quantityTextBox;
+        private System.Windows.Forms.Label categoryBox;
+        private System.Windows.Forms.Label priceNumericUpdown;
+        private System.Windows.Forms.Label quantityNumericUpDown;
     }
 }
 
