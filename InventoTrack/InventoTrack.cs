@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace InventoTrack
 {
-    public partial class MainPage : Form
+    public partial class InventoTrack : Form
     {
         DataTable inventory = new DataTable();
-        public MainPage()
+        public InventoTrack()
         {
             InitializeComponent();
         }

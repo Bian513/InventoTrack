@@ -1,6 +1,6 @@
 ﻿namespace InventoTrack
 {
-    partial class MainPage
+    partial class InventoTrack
     {
         /// <summary>
         /// Required designer variable.
