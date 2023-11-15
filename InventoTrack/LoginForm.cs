@@ -43,5 +43,10 @@ namespace InventoTrack
             InventoTrack inventoTrack = new InventoTrack();
             inventoTrack.Show();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

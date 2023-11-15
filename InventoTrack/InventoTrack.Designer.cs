@@ -66,7 +66,7 @@
             this.newButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newButton_Click.Location = new System.Drawing.Point(19, 158);
             this.newButton_Click.Name = "newButton_Click";
-            this.newButton_Click.Size = new System.Drawing.Size(300, 40);
+            this.newButton_Click.Size = new System.Drawing.Size(250, 40);
             this.newButton_Click.TabIndex = 1;
             this.newButton_Click.Text = "NEW";
             this.newButton_Click.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@
             // saveButton_Click
             // 
             this.saveButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton_Click.Location = new System.Drawing.Point(366, 158);
+            this.saveButton_Click.Location = new System.Drawing.Point(340, 158);
             this.saveButton_Click.Name = "saveButton_Click";
-            this.saveButton_Click.Size = new System.Drawing.Size(300, 40);
+            this.saveButton_Click.Size = new System.Drawing.Size(250, 40);
             this.saveButton_Click.TabIndex = 2;
             this.saveButton_Click.Text = "SAVE";
             this.saveButton_Click.UseVisualStyleBackColor = true;
@@ -86,9 +86,9 @@
             // deleteButton_Click
             // 
             this.deleteButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton_Click.Location = new System.Drawing.Point(709, 158);
+            this.deleteButton_Click.Location = new System.Drawing.Point(659, 158);
             this.deleteButton_Click.Name = "deleteButton_Click";
-            this.deleteButton_Click.Size = new System.Drawing.Size(300, 40);
+            this.deleteButton_Click.Size = new System.Drawing.Size(250, 40);
             this.deleteButton_Click.TabIndex = 3;
             this.deleteButton_Click.Text = "DELETE";
             this.deleteButton_Click.UseVisualStyleBackColor = true;
@@ -97,9 +97,9 @@
             // updateButton_Click
             // 
             this.updateButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton_Click.Location = new System.Drawing.Point(1052, 158);
+            this.updateButton_Click.Location = new System.Drawing.Point(978, 158);
             this.updateButton_Click.Name = "updateButton_Click";
-            this.updateButton_Click.Size = new System.Drawing.Size(300, 40);
+            this.updateButton_Click.Size = new System.Drawing.Size(250, 40);
             this.updateButton_Click.TabIndex = 4;
             this.updateButton_Click.Text = "UPDATE";
             this.updateButton_Click.UseVisualStyleBackColor = true;
@@ -110,7 +110,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(19, 51);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nameTextBox.Size = new System.Drawing.Size(518, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(518, 26);
             this.nameTextBox.TabIndex = 9;
             this.nameTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -120,7 +120,7 @@
             this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox1.Location = new System.Drawing.Point(13, 25);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(49, 17);
+            this.TextBox1.Size = new System.Drawing.Size(68, 25);
             this.TextBox1.TabIndex = 10;
             this.TextBox1.Text = "Name";
             this.TextBox1.Click += new System.EventHandler(this.label1_Click);
@@ -135,7 +135,7 @@
             "Rokok"});
             this.categoryComboBox.Location = new System.Drawing.Point(19, 113);
             this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(517, 22);
+            this.categoryComboBox.Size = new System.Drawing.Size(517, 26);
             this.categoryComboBox.TabIndex = 17;
             this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.categoryComboBox_SelectedIndexChanged);
             // 
@@ -153,7 +153,7 @@
             0,
             0});
             this.priceNUD.Name = "priceNUD";
-            this.priceNUD.Size = new System.Drawing.Size(519, 20);
+            this.priceNUD.Size = new System.Drawing.Size(519, 26);
             this.priceNUD.TabIndex = 18;
             this.priceNUD.Tag = "Rp";
             this.priceNUD.ThousandsSeparator = true;
@@ -168,7 +168,7 @@
             0,
             0});
             this.quantityNUD.Name = "quantityNUD";
-            this.quantityNUD.Size = new System.Drawing.Size(519, 20);
+            this.quantityNUD.Size = new System.Drawing.Size(519, 26);
             this.quantityNUD.TabIndex = 19;
             this.quantityNUD.Tag = "";
             this.quantityNUD.ThousandsSeparator = true;
@@ -180,7 +180,7 @@
             this.categoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryBox.Location = new System.Drawing.Point(13, 85);
             this.categoryBox.Name = "categoryBox";
-            this.categoryBox.Size = new System.Drawing.Size(73, 17);
+            this.categoryBox.Size = new System.Drawing.Size(100, 25);
             this.categoryBox.TabIndex = 20;
             this.categoryBox.Text = "Category";
             this.categoryBox.Click += new System.EventHandler(this.label2_Click_1);
@@ -191,7 +191,7 @@
             this.priceNumericUpdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceNumericUpdown.Location = new System.Drawing.Point(704, 25);
             this.priceNumericUpdown.Name = "priceNumericUpdown";
-            this.priceNumericUpdown.Size = new System.Drawing.Size(45, 17);
+            this.priceNumericUpdown.Size = new System.Drawing.Size(61, 25);
             this.priceNumericUpdown.TabIndex = 21;
             this.priceNumericUpdown.Text = "Price";
             this.priceNumericUpdown.Click += new System.EventHandler(this.priceNumericUpdown_Click);
@@ -202,14 +202,14 @@
             this.quantityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityNumericUpDown.Location = new System.Drawing.Point(704, 85);
             this.quantityNumericUpDown.Name = "quantityNumericUpDown";
-            this.quantityNumericUpDown.Size = new System.Drawing.Size(69, 17);
+            this.quantityNumericUpDown.Size = new System.Drawing.Size(93, 25);
             this.quantityNumericUpDown.TabIndex = 22;
             this.quantityNumericUpDown.Text = "Quantity";
             this.quantityNumericUpDown.Click += new System.EventHandler(this.quantityNumericUpDown_Click);
             // 
             // button_toLogin
             // 
-            this.button_toLogin.Location = new System.Drawing.Point(1311, 12);
+            this.button_toLogin.Location = new System.Drawing.Point(1006, 12);
             this.button_toLogin.Name = "button_toLogin";
             this.button_toLogin.Size = new System.Drawing.Size(75, 23);
             this.button_toLogin.TabIndex = 23;
@@ -219,7 +219,7 @@
             // 
             // button_toRegister
             // 
-            this.button_toRegister.Location = new System.Drawing.Point(1311, 41);
+            this.button_toRegister.Location = new System.Drawing.Point(1087, 12);
             this.button_toRegister.Name = "button_toRegister";
             this.button_toRegister.Size = new System.Drawing.Size(75, 23);
             this.button_toRegister.TabIndex = 24;
@@ -229,7 +229,7 @@
             // 
             // button_close
             // 
-            this.button_close.Location = new System.Drawing.Point(1311, 70);
+            this.button_close.Location = new System.Drawing.Point(1168, 12);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(75, 23);
             this.button_close.TabIndex = 25;
@@ -239,9 +239,9 @@
             // 
             // InventoTrack
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 598);
+            this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.button_toRegister);
             this.Controls.Add(this.button_toLogin);
