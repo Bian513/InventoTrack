@@ -43,6 +43,7 @@
             this.quantityNumericUpDown = new System.Windows.Forms.Label();
             this.button_toLogin = new System.Windows.Forms.Button();
             this.button_toRegister = new System.Windows.Forms.Button();
+            this.button_close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNUD)).BeginInit();
@@ -136,6 +137,7 @@
             this.categoryComboBox.Name = "categoryComboBox";
             this.categoryComboBox.Size = new System.Drawing.Size(517, 22);
             this.categoryComboBox.TabIndex = 17;
+            this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.categoryComboBox_SelectedIndexChanged);
             // 
             // priceNUD
             // 
@@ -170,6 +172,7 @@
             this.quantityNUD.TabIndex = 19;
             this.quantityNUD.Tag = "";
             this.quantityNUD.ThousandsSeparator = true;
+            this.quantityNUD.ValueChanged += new System.EventHandler(this.quantityNUD_ValueChanged);
             // 
             // categoryBox
             // 
@@ -191,6 +194,7 @@
             this.priceNumericUpdown.Size = new System.Drawing.Size(45, 17);
             this.priceNumericUpdown.TabIndex = 21;
             this.priceNumericUpdown.Text = "Price";
+            this.priceNumericUpdown.Click += new System.EventHandler(this.priceNumericUpdown_Click);
             // 
             // quantityNumericUpDown
             // 
@@ -201,6 +205,7 @@
             this.quantityNumericUpDown.Size = new System.Drawing.Size(69, 17);
             this.quantityNumericUpDown.TabIndex = 22;
             this.quantityNumericUpDown.Text = "Quantity";
+            this.quantityNumericUpDown.Click += new System.EventHandler(this.quantityNumericUpDown_Click);
             // 
             // button_toLogin
             // 
@@ -220,12 +225,24 @@
             this.button_toRegister.TabIndex = 24;
             this.button_toRegister.Text = "Register";
             this.button_toRegister.UseVisualStyleBackColor = true;
+            this.button_toRegister.Click += new System.EventHandler(this.button_toRegister_Click);
+            // 
+            // button_close
+            // 
+            this.button_close.Location = new System.Drawing.Point(1311, 70);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(75, 23);
+            this.button_close.TabIndex = 25;
+            this.button_close.Text = "Close";
+            this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
             // InventoTrack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 598);
+            this.Controls.Add(this.button_close);
             this.Controls.Add(this.button_toRegister);
             this.Controls.Add(this.button_toLogin);
             this.Controls.Add(this.quantityNumericUpDown);
@@ -270,6 +287,7 @@
         private System.Windows.Forms.Label quantityNumericUpDown;
         private System.Windows.Forms.Button button_toLogin;
         private System.Windows.Forms.Button button_toRegister;
+        private System.Windows.Forms.Button button_close;
     }
 }
 

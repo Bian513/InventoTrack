@@ -29,3 +29,4 @@ C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.cspr
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CoreCompileInputs.cache
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.pdb
+C:\Users\ACER\source\repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterForm.resources

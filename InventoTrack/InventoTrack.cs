@@ -149,5 +149,37 @@ namespace InventoTrack
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
         }
+
+        private void button_toRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+        }
+
+        private void priceNumericUpdown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quantityNUD_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quantityNumericUpDown_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
