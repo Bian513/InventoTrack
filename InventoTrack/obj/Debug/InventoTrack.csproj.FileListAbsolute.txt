@@ -18,3 +18,14 @@ C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin\Debug\InventoTrack.exe
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin\Debug\InventoTrack.pdb
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Debug\InventoTrack.InventoTrack.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.exe.config
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.exe
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.pdb
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.AssemblyReference.cache
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.InventoTrack.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LoginForm.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Properties.Resources.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.GenerateResource.cache
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.pdb

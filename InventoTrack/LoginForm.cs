@@ -17,7 +17,12 @@ namespace InventoTrack
             InitializeComponent();
         }
 
-        private void textBox_username_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Username_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -27,9 +32,16 @@ namespace InventoTrack
 
         }
 
-        private void buttonClick_login_Click(object sender, EventArgs e)
+        private void button_login_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_backToMain_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InventoTrack inventoTrack = new InventoTrack();
+            inventoTrack.Show();
         }
     }
 }

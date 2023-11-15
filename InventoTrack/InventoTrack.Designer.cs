@@ -41,6 +41,8 @@
             this.categoryBox = new System.Windows.Forms.Label();
             this.priceNumericUpdown = new System.Windows.Forms.Label();
             this.quantityNumericUpDown = new System.Windows.Forms.Label();
+            this.button_toLogin = new System.Windows.Forms.Button();
+            this.button_toRegister = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNUD)).BeginInit();
@@ -107,7 +109,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(19, 51);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nameTextBox.Size = new System.Drawing.Size(518, 26);
+            this.nameTextBox.Size = new System.Drawing.Size(518, 20);
             this.nameTextBox.TabIndex = 9;
             this.nameTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -117,7 +119,7 @@
             this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox1.Location = new System.Drawing.Point(13, 25);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(68, 25);
+            this.TextBox1.Size = new System.Drawing.Size(49, 17);
             this.TextBox1.TabIndex = 10;
             this.TextBox1.Text = "Name";
             this.TextBox1.Click += new System.EventHandler(this.label1_Click);
@@ -132,7 +134,7 @@
             "Rokok"});
             this.categoryComboBox.Location = new System.Drawing.Point(19, 113);
             this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(517, 26);
+            this.categoryComboBox.Size = new System.Drawing.Size(517, 22);
             this.categoryComboBox.TabIndex = 17;
             // 
             // priceNUD
@@ -149,7 +151,7 @@
             0,
             0});
             this.priceNUD.Name = "priceNUD";
-            this.priceNUD.Size = new System.Drawing.Size(519, 26);
+            this.priceNUD.Size = new System.Drawing.Size(519, 20);
             this.priceNUD.TabIndex = 18;
             this.priceNUD.Tag = "Rp";
             this.priceNUD.ThousandsSeparator = true;
@@ -164,7 +166,7 @@
             0,
             0});
             this.quantityNUD.Name = "quantityNUD";
-            this.quantityNUD.Size = new System.Drawing.Size(519, 26);
+            this.quantityNUD.Size = new System.Drawing.Size(519, 20);
             this.quantityNUD.TabIndex = 19;
             this.quantityNUD.Tag = "";
             this.quantityNUD.ThousandsSeparator = true;
@@ -175,7 +177,7 @@
             this.categoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryBox.Location = new System.Drawing.Point(13, 85);
             this.categoryBox.Name = "categoryBox";
-            this.categoryBox.Size = new System.Drawing.Size(100, 25);
+            this.categoryBox.Size = new System.Drawing.Size(73, 17);
             this.categoryBox.TabIndex = 20;
             this.categoryBox.Text = "Category";
             this.categoryBox.Click += new System.EventHandler(this.label2_Click_1);
@@ -186,7 +188,7 @@
             this.priceNumericUpdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceNumericUpdown.Location = new System.Drawing.Point(704, 25);
             this.priceNumericUpdown.Name = "priceNumericUpdown";
-            this.priceNumericUpdown.Size = new System.Drawing.Size(61, 25);
+            this.priceNumericUpdown.Size = new System.Drawing.Size(45, 17);
             this.priceNumericUpdown.TabIndex = 21;
             this.priceNumericUpdown.Text = "Price";
             // 
@@ -196,15 +198,36 @@
             this.quantityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityNumericUpDown.Location = new System.Drawing.Point(704, 85);
             this.quantityNumericUpDown.Name = "quantityNumericUpDown";
-            this.quantityNumericUpDown.Size = new System.Drawing.Size(93, 25);
+            this.quantityNumericUpDown.Size = new System.Drawing.Size(69, 17);
             this.quantityNumericUpDown.TabIndex = 22;
             this.quantityNumericUpDown.Text = "Quantity";
             // 
-            // MainPage
+            // button_toLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.button_toLogin.Location = new System.Drawing.Point(1311, 12);
+            this.button_toLogin.Name = "button_toLogin";
+            this.button_toLogin.Size = new System.Drawing.Size(75, 23);
+            this.button_toLogin.TabIndex = 23;
+            this.button_toLogin.Text = "Login";
+            this.button_toLogin.UseVisualStyleBackColor = true;
+            this.button_toLogin.Click += new System.EventHandler(this.button_toLogin_Click);
+            // 
+            // button_toRegister
+            // 
+            this.button_toRegister.Location = new System.Drawing.Point(1311, 41);
+            this.button_toRegister.Name = "button_toRegister";
+            this.button_toRegister.Size = new System.Drawing.Size(75, 23);
+            this.button_toRegister.TabIndex = 24;
+            this.button_toRegister.Text = "Register";
+            this.button_toRegister.UseVisualStyleBackColor = true;
+            // 
+            // InventoTrack
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 598);
+            this.Controls.Add(this.button_toRegister);
+            this.Controls.Add(this.button_toLogin);
             this.Controls.Add(this.quantityNumericUpDown);
             this.Controls.Add(this.priceNumericUpdown);
             this.Controls.Add(this.categoryBox);
@@ -219,7 +242,7 @@
             this.Controls.Add(this.newButton_Click);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "MainPage";
+            this.Name = "InventoTrack";
             this.Text = "InventoTrack";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -245,6 +268,8 @@
         private System.Windows.Forms.Label categoryBox;
         private System.Windows.Forms.Label priceNumericUpdown;
         private System.Windows.Forms.Label quantityNumericUpDown;
+        private System.Windows.Forms.Button button_toLogin;
+        private System.Windows.Forms.Button button_toRegister;
     }
 }
 
