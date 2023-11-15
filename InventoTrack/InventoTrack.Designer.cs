@@ -133,9 +133,15 @@
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Items.AddRange(new object[] {
             "Makanan",
+            "Minuman",
             "Deterjen",
             "Susu",
-            "Rokok"});
+            "Rokok",
+            "Alat Tulis",
+            "Sabun",
+            "Shampoo",
+            "Penyedap Rasa",
+            "Parfum"});
             this.categoryComboBox.Location = new System.Drawing.Point(19, 113);
             this.categoryComboBox.Name = "categoryComboBox";
             this.categoryComboBox.Size = new System.Drawing.Size(517, 26);
