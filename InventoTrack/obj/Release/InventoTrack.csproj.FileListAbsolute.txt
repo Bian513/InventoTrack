@@ -1,0 +1,12 @@
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin\Release\InventoTrack.exe.config
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin\Release\InventoTrack.exe
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin\Release\InventoTrack.pdb
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.csproj.AssemblyReference.cache
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.InventoTrack.resources
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.LoginForm.resources
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.Properties.Resources.resources
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.RegisterForm.resources
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.csproj.GenerateResource.cache
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.exe
+C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Release\InventoTrack.pdb
