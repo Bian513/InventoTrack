@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_Username = new System.Windows.Forms.TextBox();
+            this.textBox_username = new System.Windows.Forms.TextBox();
             this.textBox_password = new System.Windows.Forms.TextBox();
             this.textBox_sername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,13 +37,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox_Username
+            // textBox_username
             // 
-            this.textBox_Username.Location = new System.Drawing.Point(15, 28);
-            this.textBox_Username.Name = "textBox_Username";
-            this.textBox_Username.Size = new System.Drawing.Size(588, 20);
-            this.textBox_Username.TabIndex = 0;
-            this.textBox_Username.TextChanged += new System.EventHandler(this.textBox_Username_TextChanged);
+            this.textBox_username.Location = new System.Drawing.Point(15, 28);
+            this.textBox_username.Name = "textBox_username";
+            this.textBox_username.Size = new System.Drawing.Size(588, 20);
+            this.textBox_username.TabIndex = 0;
+            this.textBox_username.TextChanged += new System.EventHandler(this.textBox_Username_TextChanged);
             // 
             // textBox_password
             // 
@@ -113,7 +113,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox_sername);
             this.Controls.Add(this.textBox_password);
-            this.Controls.Add(this.textBox_Username);
+            this.Controls.Add(this.textBox_username);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -124,7 +124,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_Username;
+        private System.Windows.Forms.TextBox textBox_username;
         private System.Windows.Forms.TextBox textBox_password;
         private System.Windows.Forms.Label textBox_sername;
         private System.Windows.Forms.Label label1;
