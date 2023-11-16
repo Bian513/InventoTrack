@@ -1,6 +1,6 @@
 ﻿namespace InventoTrack
 {
-    partial class Form1
+    partial class LandingPage
     {
         /// <summary>
         /// Required designer variable.

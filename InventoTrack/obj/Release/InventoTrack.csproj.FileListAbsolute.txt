@@ -100,3 +100,4 @@ C:\Users\hp\Source\Repos\Invento\InventoTrack\obj\Release\InventoTrack.csproj.Co
 C:\Users\hp\Source\Repos\Invento\InventoTrack\obj\Release\InventoTrack.csproj.CopyComplete
 C:\Users\hp\Source\Repos\Invento\InventoTrack\obj\Release\InventoTrack.exe
 C:\Users\hp\Source\Repos\Invento\InventoTrack\obj\Release\InventoTrack.pdb
+C:\Users\hp\Source\Repos\Invento\InventoTrack\obj\Release\InventoTrack.Report.resources
