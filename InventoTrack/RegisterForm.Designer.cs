@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox1_username = new System.Windows.Forms.TextBox();
             this.textBox_email = new System.Windows.Forms.TextBox();
             this.textBox_username = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,30 +38,27 @@
             this.button_toMain = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBox1_username
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 38);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(880, 26);
-            this.textBox1.TabIndex = 0;
+            this.textBox1_username.Location = new System.Drawing.Point(15, 25);
+            this.textBox1_username.Name = "textBox1_username";
+            this.textBox1_username.Size = new System.Drawing.Size(588, 20);
+            this.textBox1_username.TabIndex = 0;
             // 
             // textBox_email
             // 
-            this.textBox_email.Location = new System.Drawing.Point(22, 98);
-            this.textBox_email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_email.Location = new System.Drawing.Point(15, 64);
             this.textBox_email.Name = "textBox_email";
-            this.textBox_email.Size = new System.Drawing.Size(880, 26);
+            this.textBox_email.Size = new System.Drawing.Size(588, 20);
             this.textBox_email.TabIndex = 1;
             this.textBox_email.TextChanged += new System.EventHandler(this.textBox_email_TextChanged);
             // 
             // textBox_username
             // 
             this.textBox_username.AutoSize = true;
-            this.textBox_username.Location = new System.Drawing.Point(18, 14);
-            this.textBox_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.textBox_username.Location = new System.Drawing.Point(12, 9);
             this.textBox_username.Name = "textBox_username";
-            this.textBox_username.Size = new System.Drawing.Size(83, 20);
+            this.textBox_username.Size = new System.Drawing.Size(55, 13);
             this.textBox_username.TabIndex = 2;
             this.textBox_username.Text = "Username";
             this.textBox_username.Click += new System.EventHandler(this.textBox_username_Click);
@@ -69,10 +66,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 74);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
+            this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Email";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -80,29 +76,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 134);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Password";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox_password
             // 
-            this.textBox_password.Location = new System.Drawing.Point(22, 158);
-            this.textBox_password.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox_password.Location = new System.Drawing.Point(15, 103);
             this.textBox_password.Name = "textBox_password";
-            this.textBox_password.Size = new System.Drawing.Size(880, 26);
+            this.textBox_password.Size = new System.Drawing.Size(588, 20);
             this.textBox_password.TabIndex = 5;
             this.textBox_password.TextChanged += new System.EventHandler(this.textBox_password_TextChanged);
             // 
             // button_register
             // 
-            this.button_register.Location = new System.Drawing.Point(22, 198);
-            this.button_register.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_register.Location = new System.Drawing.Point(15, 129);
             this.button_register.Name = "button_register";
-            this.button_register.Size = new System.Drawing.Size(112, 35);
+            this.button_register.Size = new System.Drawing.Size(75, 23);
             this.button_register.TabIndex = 6;
             this.button_register.Text = "Register";
             this.button_register.UseVisualStyleBackColor = true;
@@ -110,10 +103,9 @@
             // 
             // button_toMain
             // 
-            this.button_toMain.Location = new System.Drawing.Point(790, 198);
-            this.button_toMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_toMain.Location = new System.Drawing.Point(527, 129);
             this.button_toMain.Name = "button_toMain";
-            this.button_toMain.Size = new System.Drawing.Size(112, 35);
+            this.button_toMain.Size = new System.Drawing.Size(75, 23);
             this.button_toMain.TabIndex = 7;
             this.button_toMain.Text = "Back";
             this.button_toMain.UseVisualStyleBackColor = true;
@@ -121,9 +113,9 @@
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 821);
+            this.ClientSize = new System.Drawing.Size(624, 534);
             this.Controls.Add(this.button_toMain);
             this.Controls.Add(this.button_register);
             this.Controls.Add(this.textBox_password);
@@ -131,8 +123,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_username);
             this.Controls.Add(this.textBox_email);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.textBox1_username);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
@@ -142,7 +133,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox1_username;
         private System.Windows.Forms.TextBox textBox_email;
         private System.Windows.Forms.Label textBox_username;
         private System.Windows.Forms.Label label2;
