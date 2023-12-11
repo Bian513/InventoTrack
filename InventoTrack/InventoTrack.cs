@@ -47,6 +47,7 @@ namespace InventoTrack
 
         }
 
+        //NEW BUTTON
         private void button1_Click(object sender, EventArgs e)
         {       
             nameTextBox.Text = "";
@@ -55,6 +56,7 @@ namespace InventoTrack
             quantityNUD.Text = "0";
         }
 
+        //SAVE BUTTON
         private void button2_Click(object sender, EventArgs e)
         {
             String name = nameTextBox.Text;
@@ -90,6 +92,7 @@ namespace InventoTrack
 
         }
 
+        //DELETE BUTTON
         private void button3_Click(object sender, EventArgs e)
         {
             try
