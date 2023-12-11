@@ -132,6 +132,9 @@
     <EmbeddedResource Include="InventoTrack.resx">
       <DependentUpon>InventoTrack.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LandingPage.resx">
+      <DependentUpon>LandingPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

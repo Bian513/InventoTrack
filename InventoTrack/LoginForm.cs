@@ -81,8 +81,8 @@ namespace InventoTrack
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            InventoTrack inventoTrack = new InventoTrack();
-            inventoTrack.Show();
+            LandingPage landingpage = new LandingPage();
+            landingpage.Show();
         }
     }
 }

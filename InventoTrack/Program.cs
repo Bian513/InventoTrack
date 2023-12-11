@@ -16,9 +16,7 @@ namespace InventoTrack
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());   
-            Application.Run(new InventoTrack());
-            Application.Run(new RegisterForm());
+            Application.Run(new LandingPage());
         }
     }
 }
