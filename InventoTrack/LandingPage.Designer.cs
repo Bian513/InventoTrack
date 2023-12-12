@@ -59,7 +59,7 @@
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTextBox.Location = new System.Drawing.Point(511, 317);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(326, 35);
+            this.usernameTextBox.Size = new System.Drawing.Size(326, 26);
             this.usernameTextBox.TabIndex = 1;
             this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
@@ -70,7 +70,7 @@
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.Location = new System.Drawing.Point(506, 285);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(128, 29);
+            this.usernameLabel.Size = new System.Drawing.Size(88, 20);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "username";
             // 
@@ -81,7 +81,7 @@
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.Location = new System.Drawing.Point(506, 365);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(126, 29);
+            this.passwordLabel.Size = new System.Drawing.Size(85, 20);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Text = "password";
             // 
@@ -92,8 +92,9 @@
             this.passwordTextBox.Location = new System.Drawing.Point(511, 397);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(326, 35);
+            this.passwordTextBox.Size = new System.Drawing.Size(326, 26);
             this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // label1
             // 
@@ -103,7 +104,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(661, 526);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 22);
+            this.label1.Size = new System.Drawing.Size(18, 15);
             this.label1.TabIndex = 5;
             this.label1.Text = "or";
             // 
@@ -115,7 +116,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
             this.linkLabel1.Location = new System.Drawing.Point(532, 526);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(128, 22);
+            this.linkLabel1.Size = new System.Drawing.Size(87, 15);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "create account";
@@ -129,7 +130,7 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
             this.linkLabel2.Location = new System.Drawing.Point(692, 526);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(132, 22);
+            this.linkLabel2.Size = new System.Drawing.Size(90, 15);
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "reset password";
@@ -152,7 +153,7 @@
             // 
             // LandingPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_LandingPage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
