@@ -62,7 +62,9 @@ namespace InventoTrack
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            this.Hide();
+            RegisterPage registerpage = new RegisterPage();
+            registerpage.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -76,6 +78,11 @@ namespace InventoTrack
         }
 
         private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordLabel_Click(object sender, EventArgs e)
         {
 
         }
