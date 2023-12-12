@@ -41,8 +41,6 @@
             this.categoryBox = new System.Windows.Forms.Label();
             this.priceNumericUpdown = new System.Windows.Forms.Label();
             this.quantityNumericUpDown = new System.Windows.Forms.Label();
-            this.button_toLogin = new System.Windows.Forms.Button();
-            this.button_toRegister = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNUD)).BeginInit();
@@ -216,26 +214,6 @@
             this.quantityNumericUpDown.Text = "Quantity";
             this.quantityNumericUpDown.Click += new System.EventHandler(this.quantityNumericUpDown_Click);
             // 
-            // button_toLogin
-            // 
-            this.button_toLogin.Location = new System.Drawing.Point(1006, 12);
-            this.button_toLogin.Name = "button_toLogin";
-            this.button_toLogin.Size = new System.Drawing.Size(75, 23);
-            this.button_toLogin.TabIndex = 23;
-            this.button_toLogin.Text = "Login";
-            this.button_toLogin.UseVisualStyleBackColor = true;
-            this.button_toLogin.Click += new System.EventHandler(this.button_toLogin_Click);
-            // 
-            // button_toRegister
-            // 
-            this.button_toRegister.Location = new System.Drawing.Point(1087, 12);
-            this.button_toRegister.Name = "button_toRegister";
-            this.button_toRegister.Size = new System.Drawing.Size(75, 23);
-            this.button_toRegister.TabIndex = 24;
-            this.button_toRegister.Text = "Register";
-            this.button_toRegister.UseVisualStyleBackColor = true;
-            this.button_toRegister.Click += new System.EventHandler(this.button_toRegister_Click);
-            // 
             // button_close
             // 
             this.button_close.Location = new System.Drawing.Point(1168, 12);
@@ -252,8 +230,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 664);
             this.Controls.Add(this.button_close);
-            this.Controls.Add(this.button_toRegister);
-            this.Controls.Add(this.button_toLogin);
             this.Controls.Add(this.quantityNumericUpDown);
             this.Controls.Add(this.priceNumericUpdown);
             this.Controls.Add(this.categoryBox);
@@ -294,8 +270,6 @@
         private System.Windows.Forms.Label categoryBox;
         private System.Windows.Forms.Label priceNumericUpdown;
         private System.Windows.Forms.Label quantityNumericUpDown;
-        private System.Windows.Forms.Button button_toLogin;
-        private System.Windows.Forms.Button button_toRegister;
         private System.Windows.Forms.Button button_close;
     }
 }

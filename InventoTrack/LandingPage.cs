@@ -17,18 +17,37 @@ namespace InventoTrack
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void LandingPage_Load(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm loginform = new LoginForm();
-            loginform.Show();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void newButton(object sender, EventArgs e)
         {
             this.Hide();
-            RegisterForm registerform = new RegisterForm();
-            registerform.Show();
+            InventoTrack inventoTrack = new InventoTrack();
+            inventoTrack.Show();
+        }
+
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
