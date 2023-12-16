@@ -69,7 +69,9 @@ namespace InventoTrack
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            this.Hide();
+            ResetPassword resetpassword = new ResetPassword();
+            resetpassword.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

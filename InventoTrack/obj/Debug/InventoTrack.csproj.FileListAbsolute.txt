@@ -18,53 +18,9 @@ C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin\Debug\InventoTrack.exe
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\bin\Debug\InventoTrack.pdb
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Debug\InventoTrack.InventoTrack.resources
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.exe.config
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.exe
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.pdb
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.AssemblyReference.cache
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.InventoTrack.resources
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LoginForm.resources
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Properties.Resources.resources
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.GenerateResource.cache
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CoreCompileInputs.cache
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.pdb
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterForm.resources
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Debug\InventoTrack.LoginForm.resources
 C:\Users\hp\source\repos\Project PBO InventoTrack\InventoTrack0\InventoTrack\obj\Debug\InventoTrack.RegisterForm.resources
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.SuggestedBindingRedirects.cache
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe.config
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.HashCode.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Npgsql.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Buffers.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Collections.Immutable.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Diagnostics.DiagnosticSource.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Memory.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Encodings.Web.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Json.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Channels.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.ValueTuple.dll
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.HashCode.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\Npgsql.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Buffers.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Collections.Immutable.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Diagnostics.DiagnosticSource.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Memory.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Json.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Channels.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\System.ValueTuple.xml
-C:\Users\ACER\source\repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CopyComplete
 C:\Users\hp\source\repos\InventoTrack Project\InventoTrack\bin\Debug\InventoTrack.exe.config
 C:\Users\hp\source\repos\InventoTrack Project\InventoTrack\bin\Debug\InventoTrack.exe
 C:\Users\hp\source\repos\InventoTrack Project\InventoTrack\bin\Debug\InventoTrack.pdb
@@ -302,3 +258,51 @@ C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\Inven
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CopyComplete
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.pdb
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.exe.config
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.HashCode.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Npgsql.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Buffers.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Collections.Immutable.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Memory.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Json.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Channels.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.ValueTuple.dll
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Npgsql.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Buffers.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Collections.Immutable.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Memory.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Text.Json.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Channels.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.ValueTuple.xml
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.AssemblyReference.cache
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.SuggestedBindingRedirects.cache
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe.config
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.InventoTrack.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LandingPage.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LoginForm.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Properties.Resources.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterForm.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterPage.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Report.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.ResetPassword.resources
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.GenerateResource.cache
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CopyComplete
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe
+C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.pdb
+C:\Users\ACER\source\repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.pdb
