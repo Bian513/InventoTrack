@@ -186,7 +186,6 @@
             this.textBox_otp.Location = new System.Drawing.Point(467, 342);
             this.textBox_otp.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.textBox_otp.Name = "textBox_otp";
-            this.textBox_otp.PasswordChar = '*';
             this.textBox_otp.Size = new System.Drawing.Size(205, 30);
             this.textBox_otp.TabIndex = 10;
             // 
