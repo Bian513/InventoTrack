@@ -55,9 +55,10 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 258);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 246);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(30);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1143, 276);
@@ -70,7 +71,7 @@
             this.newButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.newButton_Click.Location = new System.Drawing.Point(59, 197);
+            this.newButton_Click.Location = new System.Drawing.Point(59, 185);
             this.newButton_Click.Name = "newButton_Click";
             this.newButton_Click.Size = new System.Drawing.Size(320, 50);
             this.newButton_Click.TabIndex = 1;
@@ -84,7 +85,7 @@
             this.saveButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.saveButton_Click.Location = new System.Drawing.Point(469, 197);
+            this.saveButton_Click.Location = new System.Drawing.Point(469, 185);
             this.saveButton_Click.Name = "saveButton_Click";
             this.saveButton_Click.Size = new System.Drawing.Size(320, 50);
             this.saveButton_Click.TabIndex = 2;
@@ -98,7 +99,7 @@
             this.deleteButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.deleteButton_Click.Location = new System.Drawing.Point(882, 197);
+            this.deleteButton_Click.Location = new System.Drawing.Point(882, 185);
             this.deleteButton_Click.Name = "deleteButton_Click";
             this.deleteButton_Click.Size = new System.Drawing.Size(320, 50);
             this.deleteButton_Click.TabIndex = 3;
@@ -111,7 +112,7 @@
             this.updateButton_Click.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.updateButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.updateButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton_Click.Location = new System.Drawing.Point(469, 542);
+            this.updateButton_Click.Location = new System.Drawing.Point(469, 530);
             this.updateButton_Click.Name = "updateButton_Click";
             this.updateButton_Click.Size = new System.Drawing.Size(320, 50);
             this.updateButton_Click.TabIndex = 4;
@@ -127,7 +128,7 @@
             this.nameTextBox.Location = new System.Drawing.Point(59, 57);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.nameTextBox.Size = new System.Drawing.Size(450, 35);
+            this.nameTextBox.Size = new System.Drawing.Size(450, 26);
             this.nameTextBox.TabIndex = 9;
             this.nameTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -136,10 +137,10 @@
             this.TextBox1.AutoSize = true;
             this.TextBox1.BackColor = System.Drawing.Color.Transparent;
             this.TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(56)))));
+            this.TextBox1.ForeColor = System.Drawing.Color.White;
             this.TextBox1.Location = new System.Drawing.Point(54, 24);
             this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(82, 29);
+            this.TextBox1.Size = new System.Drawing.Size(55, 20);
             this.TextBox1.TabIndex = 10;
             this.TextBox1.Text = "Name";
             this.TextBox1.Click += new System.EventHandler(this.label1_Click);
@@ -161,9 +162,9 @@
             "Shampoo",
             "Penyedap Rasa",
             "Parfum"});
-            this.categoryComboBox.Location = new System.Drawing.Point(59, 141);
+            this.categoryComboBox.Location = new System.Drawing.Point(59, 129);
             this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(450, 35);
+            this.categoryComboBox.Size = new System.Drawing.Size(450, 26);
             this.categoryComboBox.TabIndex = 17;
             this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.categoryComboBox_SelectedIndexChanged);
             // 
@@ -185,7 +186,7 @@
             0,
             0});
             this.priceNUD.Name = "priceNUD";
-            this.priceNUD.Size = new System.Drawing.Size(450, 35);
+            this.priceNUD.Size = new System.Drawing.Size(450, 26);
             this.priceNUD.TabIndex = 18;
             this.priceNUD.Tag = "Rp";
             this.priceNUD.ThousandsSeparator = true;
@@ -197,14 +198,14 @@
             this.quantityNUD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.quantityNUD.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.quantityNUD.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityNUD.Location = new System.Drawing.Point(752, 142);
+            this.quantityNUD.Location = new System.Drawing.Point(752, 130);
             this.quantityNUD.Maximum = new decimal(new int[] {
             -1530494976,
             232830,
             0,
             0});
             this.quantityNUD.Name = "quantityNUD";
-            this.quantityNUD.Size = new System.Drawing.Size(450, 35);
+            this.quantityNUD.Size = new System.Drawing.Size(450, 26);
             this.quantityNUD.TabIndex = 19;
             this.quantityNUD.Tag = "";
             this.quantityNUD.ThousandsSeparator = true;
@@ -215,10 +216,10 @@
             this.categoryBox.AutoSize = true;
             this.categoryBox.BackColor = System.Drawing.Color.Transparent;
             this.categoryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.categoryBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(56)))));
-            this.categoryBox.Location = new System.Drawing.Point(54, 110);
+            this.categoryBox.ForeColor = System.Drawing.Color.White;
+            this.categoryBox.Location = new System.Drawing.Point(54, 98);
             this.categoryBox.Name = "categoryBox";
-            this.categoryBox.Size = new System.Drawing.Size(118, 29);
+            this.categoryBox.Size = new System.Drawing.Size(81, 20);
             this.categoryBox.TabIndex = 20;
             this.categoryBox.Text = "Category";
             this.categoryBox.Click += new System.EventHandler(this.label2_Click_1);
@@ -228,10 +229,10 @@
             this.priceNumericUpdown.AutoSize = true;
             this.priceNumericUpdown.BackColor = System.Drawing.Color.Transparent;
             this.priceNumericUpdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceNumericUpdown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(56)))));
+            this.priceNumericUpdown.ForeColor = System.Drawing.Color.White;
             this.priceNumericUpdown.Location = new System.Drawing.Point(747, 24);
             this.priceNumericUpdown.Name = "priceNumericUpdown";
-            this.priceNumericUpdown.Size = new System.Drawing.Size(74, 29);
+            this.priceNumericUpdown.Size = new System.Drawing.Size(49, 20);
             this.priceNumericUpdown.TabIndex = 21;
             this.priceNumericUpdown.Text = "Price";
             this.priceNumericUpdown.Click += new System.EventHandler(this.priceNumericUpdown_Click);
@@ -241,10 +242,10 @@
             this.quantityNumericUpDown.AutoSize = true;
             this.quantityNumericUpDown.BackColor = System.Drawing.Color.Transparent;
             this.quantityNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityNumericUpDown.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(56)))));
-            this.quantityNumericUpDown.Location = new System.Drawing.Point(747, 110);
+            this.quantityNumericUpDown.ForeColor = System.Drawing.Color.White;
+            this.quantityNumericUpDown.Location = new System.Drawing.Point(747, 98);
             this.quantityNumericUpDown.Name = "quantityNumericUpDown";
-            this.quantityNumericUpDown.Size = new System.Drawing.Size(108, 29);
+            this.quantityNumericUpDown.Size = new System.Drawing.Size(76, 20);
             this.quantityNumericUpDown.TabIndex = 22;
             this.quantityNumericUpDown.Text = "Quantity";
             this.quantityNumericUpDown.Click += new System.EventHandler(this.quantityNumericUpDown_Click);
@@ -254,7 +255,7 @@
             this.button1.BackColor = System.Drawing.Color.Aqua;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(469, 602);
+            this.button1.Location = new System.Drawing.Point(469, 590);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(320, 50);
             this.button1.TabIndex = 26;
@@ -264,7 +265,7 @@
             // 
             // InventoTrack
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_MainPage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
