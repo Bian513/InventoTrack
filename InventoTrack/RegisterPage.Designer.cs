@@ -37,7 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_otp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -137,17 +137,18 @@
             this.button2.TabIndex = 18;
             this.button2.Text = "SEND OTP";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // textBox_otp
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(483, 432);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(205, 30);
-            this.textBox1.TabIndex = 17;
+            this.textBox_otp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_otp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_otp.Location = new System.Drawing.Point(483, 432);
+            this.textBox_otp.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.textBox_otp.Name = "textBox_otp";
+            this.textBox_otp.PasswordChar = '*';
+            this.textBox_otp.Size = new System.Drawing.Size(205, 30);
+            this.textBox_otp.TabIndex = 17;
             // 
             // label2
             // 
@@ -168,7 +169,7 @@
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_LandingPage;
             this.ClientSize = new System.Drawing.Size(1283, 682);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_otp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.label1);
@@ -178,7 +179,7 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.signupButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "RegisterPage";
             this.Text = "InventoTrack";
@@ -198,7 +199,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_otp;
         private System.Windows.Forms.Label label2;
     }
 }

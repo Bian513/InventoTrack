@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetPassword));
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button_sendOtp = new System.Windows.Forms.Button();
+            this.textBox_otp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
@@ -39,32 +39,31 @@
             this.loginButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // button_sendOtp
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(671, 367);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 34);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "SEND OTP";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_sendOtp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_sendOtp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_sendOtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_sendOtp.ForeColor = System.Drawing.Color.White;
+            this.button_sendOtp.Location = new System.Drawing.Point(671, 367);
+            this.button_sendOtp.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.button_sendOtp.Name = "button_sendOtp";
+            this.button_sendOtp.Size = new System.Drawing.Size(139, 34);
+            this.button_sendOtp.TabIndex = 19;
+            this.button_sendOtp.Text = "SEND OTP";
+            this.button_sendOtp.UseVisualStyleBackColor = false;
+            this.button_sendOtp.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // textBox_otp
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(460, 371);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(205, 30);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_otp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_otp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_otp.Location = new System.Drawing.Point(460, 371);
+            this.textBox_otp.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.textBox_otp.Name = "textBox_otp";
+            this.textBox_otp.Size = new System.Drawing.Size(205, 30);
+            this.textBox_otp.TabIndex = 18;
+            this.textBox_otp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -149,8 +148,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_LandingPage;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button_sendOtp);
+            this.Controls.Add(this.textBox_otp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
@@ -169,8 +168,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button_sendOtp;
+        private System.Windows.Forms.TextBox textBox_otp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
