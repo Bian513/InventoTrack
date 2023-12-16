@@ -108,7 +108,9 @@ namespace InventoTrack
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Report report = new Report();
+            report.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -180,9 +182,11 @@ namespace InventoTrack
 
         }
 
-        private void button_close_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            LandingPage landingpage = new LandingPage();
+            landingpage.Show();
         }
     }
 }

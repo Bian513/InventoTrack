@@ -73,6 +73,16 @@ namespace InventoTrack.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Background_MainPage {
+            get {
+                object obj = ResourceManager.GetObject("Background MainPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_google {
             get {
                 object obj = ResourceManager.GetObject("logo google", resourceCulture);
