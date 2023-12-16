@@ -112,7 +112,7 @@ namespace InventoTrack
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Isi email terlebih dahulu");
                 }
             }
             else

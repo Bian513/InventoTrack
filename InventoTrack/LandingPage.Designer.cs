@@ -39,7 +39,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_otp = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.usernameTextBox.Location = new System.Drawing.Point(467, 187);
             this.usernameTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(350, 41);
+            this.usernameTextBox.Size = new System.Drawing.Size(350, 30);
             this.usernameTextBox.TabIndex = 1;
             this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
@@ -77,7 +77,7 @@
             this.usernameLabel.Location = new System.Drawing.Point(462, 159);
             this.usernameLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(132, 30);
+            this.usernameLabel.Size = new System.Drawing.Size(92, 22);
             this.usernameLabel.TabIndex = 2;
             this.usernameLabel.Text = "Username";
             this.usernameLabel.Click += new System.EventHandler(this.usernameLabel_Click);
@@ -90,7 +90,7 @@
             this.passwordLabel.Location = new System.Drawing.Point(462, 236);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(126, 30);
+            this.passwordLabel.Size = new System.Drawing.Size(89, 22);
             this.passwordLabel.TabIndex = 3;
             this.passwordLabel.Text = "Password";
             this.passwordLabel.Click += new System.EventHandler(this.passwordLabel_Click);
@@ -103,7 +103,7 @@
             this.passwordTextBox.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(350, 41);
+            this.passwordTextBox.Size = new System.Drawing.Size(350, 30);
             this.passwordTextBox.TabIndex = 4;
             this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
@@ -116,7 +116,7 @@
             this.label1.Location = new System.Drawing.Point(622, 480);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 26);
+            this.label1.Size = new System.Drawing.Size(22, 18);
             this.label1.TabIndex = 5;
             this.label1.Text = "or";
             // 
@@ -129,7 +129,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(499, 480);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(154, 26);
+            this.linkLabel1.Size = new System.Drawing.Size(106, 18);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "create account";
@@ -145,7 +145,7 @@
             this.linkLabel2.Location = new System.Drawing.Point(658, 480);
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(159, 26);
+            this.linkLabel2.Size = new System.Drawing.Size(110, 18);
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "reset password";
@@ -175,20 +175,20 @@
             this.label2.Location = new System.Drawing.Point(462, 314);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 45);
+            this.label2.Size = new System.Drawing.Size(48, 22);
             this.label2.TabIndex = 9;
             this.label2.Text = "OTP";
             // 
-            // textBox1
+            // textBox_otp
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(467, 342);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(205, 41);
-            this.textBox1.TabIndex = 10;
+            this.textBox_otp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_otp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_otp.Location = new System.Drawing.Point(467, 342);
+            this.textBox_otp.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.textBox_otp.Name = "textBox_otp";
+            this.textBox_otp.PasswordChar = '*';
+            this.textBox_otp.Size = new System.Drawing.Size(205, 30);
+            this.textBox_otp.TabIndex = 10;
             // 
             // button2
             // 
@@ -207,13 +207,13 @@
             // 
             // LandingPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_LandingPage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1265, 682);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_otp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel2);
@@ -250,7 +250,7 @@
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_otp;
         private System.Windows.Forms.Button button2;
     }
 }
