@@ -30,8 +30,8 @@ namespace InventoTrack
         private void newButton(object sender, EventArgs e)
         {
             string otp = textBox_otp.Text;
-            if (randomCode == otp)
-            {
+            //if (randomCode == otp)
+            //{
                 string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
                 SqlConnection connection = new SqlConnection(connectionString);
                 string username = usernameTextBox.Text;
@@ -59,11 +59,11 @@ namespace InventoTrack
                     connection.Close();
                     MessageBox.Show(ex.Message);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Kode OTP Salah");
-            }
+            //}
+            //else
+            //{
+                //MessageBox.Show("Kode OTP Salah");
+            //}
         }
 
         private void usernameTextBox_TextChanged(object sender, EventArgs e)

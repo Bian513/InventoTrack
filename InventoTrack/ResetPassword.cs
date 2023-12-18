@@ -110,7 +110,7 @@ namespace InventoTrack
                     landingPage.Show();
                     this.Hide();
                 }
-                catch (Exception ex)
+                catch
                 {
                     MessageBox.Show("Isi email terlebih dahulu");
                 }

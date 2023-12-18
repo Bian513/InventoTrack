@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace InventoTrack
 {
     public partial class InventoTrack : Form
     {
         DataTable inventory = new DataTable();
+        SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+
         public InventoTrack()
         {
             InitializeComponent();
@@ -20,20 +24,27 @@ namespace InventoTrack
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            /*
+            connection.Open();
+            SqlCommand selectAll = new SqlCommand("SELECT * FROM items", connection);
+            selectAll.ExecuteNonQuery();
+            SqlDataReader reader = selectAll.ExecuteReader();
+            */
+
+
             inventory.Columns.Add("Name");
             inventory.Columns.Add("Category");
             inventory.Columns.Add("Price");
             inventory.Columns.Add("Quantity");
 
             dataGridView1.DataSource = inventory;
-
-
+            
+            //connection.Close();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-               
                 nameTextBox.Text = inventory.Rows[dataGridView1.CurrentCell.RowIndex].ItemArray[1].ToString();
                 priceNUD.Text = inventory.Rows[dataGridView1.CurrentCell.RowIndex].ItemArray[3].ToString();
                 quantityNUD.Text = inventory.Rows[dataGridView1.CurrentCell.RowIndex].ItemArray[4].ToString();
@@ -61,8 +72,8 @@ namespace InventoTrack
         {
             String name = nameTextBox.Text;
             String category = categoryComboBox.Text;
-            String price = priceNUD.Text;    
-            String quantity = quantityNUD.Text;
+            string price = priceNUD.Text;    
+            string quantity = quantityNUD.Text;
 
             
 
@@ -84,6 +95,15 @@ namespace InventoTrack
             }
             else
             {
+                connection.Open();
+                string commandString = "INSERT INTO items (name, category, price, quantity) VALUES (@name, @category, @price, @quantity);";
+                SqlCommand command = new SqlCommand(commandString, connection);
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@category", category);
+                command.Parameters.AddWithValue("@price", int.Parse(price));
+                command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
+                command.ExecuteNonQuery();
+
                 inventory.Rows.Add(name, category, price, quantity);
                 button1_Click(sender, e);
             }

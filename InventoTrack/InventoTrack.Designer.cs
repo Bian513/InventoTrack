@@ -189,7 +189,6 @@
             this.priceNUD.Size = new System.Drawing.Size(450, 26);
             this.priceNUD.TabIndex = 18;
             this.priceNUD.Tag = "Rp";
-            this.priceNUD.ThousandsSeparator = true;
             this.priceNUD.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // quantityNUD
