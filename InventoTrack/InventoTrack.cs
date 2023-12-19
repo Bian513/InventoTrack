@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace InventoTrack
@@ -17,7 +19,6 @@ namespace InventoTrack
     {
         
         SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
-
         public InventoTrack()
         {
             InitializeComponent();
@@ -35,11 +36,13 @@ namespace InventoTrack
                 source.DataSource = reader;
                 dataGridView1.DataSource = source;
                 deleteButton_Click.Show();
+                newButton_Click.Show();
             }
             else
             {
                 dataGridView1.DataSource = null;
                 deleteButton_Click.Hide();
+                newButton_Click.Hide();
             }
             
             connection.Close();
@@ -60,8 +63,29 @@ namespace InventoTrack
 
         //EDIT BUTTON
         private void button1_Click(object sender, EventArgs e)
-        {       
-           
+        {
+            try
+            {
+                String name = nameTextBox.Text;
+                String category = categoryComboBox.Text;
+                string price = priceNUD.Text;
+                string quantity = quantityNUD.Text;
+                int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+                connection.Open();
+                SqlCommand editCmd = new SqlCommand("UPDATE items SET name = @name, category = @category, price = @price, quantity = @quantity WHERE id = @id;", connection);
+                editCmd.Parameters.AddWithValue("@name", name);
+                editCmd.Parameters.AddWithValue("@category", category);
+                editCmd.Parameters.AddWithValue("@price", int.Parse(price));
+                editCmd.Parameters.AddWithValue("@quantity", int.Parse(quantity));
+                editCmd.Parameters.AddWithValue("@id", id);
+                editCmd.ExecuteNonQuery();
+                connection.Close();
+                Form1_Load(sender, e);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("Error: " + err);
+            }
         }
 
         //SAVE BUTTON
