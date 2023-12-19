@@ -29,14 +29,21 @@ namespace InventoTrack
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             connection.Open();
             SqlCommand selectAll = new SqlCommand("SELECT * FROM items", connection);
             selectAll.ExecuteNonQuery();
             SqlDataReader reader = selectAll.ExecuteReader();
-            BindingSource source = new BindingSource();
-            source.DataSource = reader;
-            dataGridView1.DataSource = source;
+            if (reader.HasRows)
+            {
+                BindingSource source = new BindingSource();
+                source.DataSource = reader;
+                dataGridView1.DataSource = source;
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+            }
+            
             connection.Close();
             //
             
@@ -108,9 +115,6 @@ namespace InventoTrack
                 button1_Click(sender, e);
                 Form1_Load(sender, e);
             }
-
-
-
         }
 
         //DELETE BUTTON
@@ -118,8 +122,21 @@ namespace InventoTrack
         {
             try
             {
-                string id = dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString(); ;
-                MessageBox.Show(id);
+                int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+                if(id != null)
+                {
+                    //MessageBox.Show(id.ToString());
+                    connection.Open();
+                    SqlCommand deleteCmd = new SqlCommand("DELETE FROM items WHERE id = @id;", connection);
+                    deleteCmd.Parameters.AddWithValue("@id", id);
+                    deleteCmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+                else
+                {
+                    MessageBox.Show("tidak ada yang dipilih");
+                }
+                Form1_Load(sender, e);
             }
             catch (Exception err)
             {
