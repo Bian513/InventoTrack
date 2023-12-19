@@ -15,31 +15,31 @@ namespace InventoTrack
     public partial class InventoTrack : Form
     {
         DataTable inventory = new DataTable();
+        
         SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
 
         public InventoTrack()
         {
+            inventory.Columns.Add("Name");
+            inventory.Columns.Add("Category");
+            inventory.Columns.Add("Price");
+            inventory.Columns.Add("Quantity");
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*
+            
             connection.Open();
             SqlCommand selectAll = new SqlCommand("SELECT * FROM items", connection);
             selectAll.ExecuteNonQuery();
             SqlDataReader reader = selectAll.ExecuteReader();
-            */
-
-
-            inventory.Columns.Add("Name");
-            inventory.Columns.Add("Category");
-            inventory.Columns.Add("Price");
-            inventory.Columns.Add("Quantity");
-
-            dataGridView1.DataSource = inventory;
+            BindingSource source = new BindingSource();
+            source.DataSource = reader;
+            dataGridView1.DataSource = source;
+            connection.Close();
+            //
             
-            //connection.Close();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -62,7 +62,7 @@ namespace InventoTrack
         private void button1_Click(object sender, EventArgs e)
         {       
             nameTextBox.Text = "";
-            categoryComboBox.SelectedIndex = -1;
+            categoryBox.Text = "";
             priceNUD.Text = "0";
             quantityNUD.Text = "0";
         }
@@ -103,9 +103,10 @@ namespace InventoTrack
                 command.Parameters.AddWithValue("@price", int.Parse(price));
                 command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
                 command.ExecuteNonQuery();
-
+                connection.Close();
                 inventory.Rows.Add(name, category, price, quantity);
                 button1_Click(sender, e);
+                Form1_Load(sender, e);
             }
 
 
@@ -117,7 +118,8 @@ namespace InventoTrack
         {
             try
             {
-                inventory.Rows[dataGridView1.CurrentCell.RowIndex].Delete();
+                string id = dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString(); ;
+                MessageBox.Show(id);
             }
             catch (Exception err)
             {
