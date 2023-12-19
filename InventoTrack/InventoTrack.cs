@@ -38,14 +38,15 @@ namespace InventoTrack
                 BindingSource source = new BindingSource();
                 source.DataSource = reader;
                 dataGridView1.DataSource = source;
+                deleteButton_Click.Show();
             }
             else
             {
                 dataGridView1.DataSource = null;
+                deleteButton_Click.Hide();
             }
             
             connection.Close();
-            //
             
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
