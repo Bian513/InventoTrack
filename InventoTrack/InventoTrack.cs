@@ -48,11 +48,7 @@ namespace InventoTrack
         {
             try
             {
-                nameTextBox.Text = inventory.Rows[dataGridView1.CurrentCell.RowIndex].ItemArray[1].ToString();
-                priceNUD.Text = inventory.Rows[dataGridView1.CurrentCell.RowIndex].ItemArray[3].ToString();
-                quantityNUD.Text = inventory.Rows[dataGridView1.CurrentCell.RowIndex].ItemArray[4].ToString();
-                String itemToLookFor = inventory.Rows[dataGridView1.CurrentCell.RowIndex].ItemArray[2].ToString();
-                categoryComboBox.SelectedIndex = categoryComboBox.Items.IndexOf(itemToLookFor);
+                
             }
             catch (Exception err)
             {
@@ -107,7 +103,6 @@ namespace InventoTrack
                 command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
                 command.ExecuteNonQuery();
                 connection.Close();
-                inventory.Rows.Add(name, category, price, quantity);
                 button1_Click(sender, e);
                 Form1_Load(sender, e);
             }
@@ -119,19 +114,12 @@ namespace InventoTrack
             try
             {
                 int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
-                if(id != null)
-                {
-                    //MessageBox.Show(id.ToString());
-                    connection.Open();
-                    SqlCommand deleteCmd = new SqlCommand("DELETE FROM items WHERE id = @id;", connection);
-                    deleteCmd.Parameters.AddWithValue("@id", id);
-                    deleteCmd.ExecuteNonQuery();
-                    connection.Close();
-                }
-                else
-                {
-                    MessageBox.Show("tidak ada yang dipilih");
-                }
+                //MessageBox.Show(id.ToString());
+                connection.Open();
+                SqlCommand deleteCmd = new SqlCommand("DELETE FROM items WHERE id = @id;", connection);
+                deleteCmd.Parameters.AddWithValue("@id", id);
+                deleteCmd.ExecuteNonQuery();
+                connection.Close();
                 Form1_Load(sender, e);
             }
             catch (Exception err)
