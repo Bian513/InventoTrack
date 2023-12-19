@@ -159,12 +159,28 @@ namespace InventoTrack
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-            this.Hide();
-            Report report = new Report();
-            report.Show();
-            
-            
+            try
+            {
+                connection.Open();
+                SqlCommand selectAll = new SqlCommand("SELECT * FROM items;", connection);
+                SqlDataReader reader = selectAll.ExecuteReader();
+                string pathFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string fileName = "inventoTrack.csv";
+                string filePath = Path.Combine(pathFolder, fileName);
+                StreamWriter file = new StreamWriter(filePath);
+                file.WriteLine("id,name,category,price,quantity");
+                while (reader.Read())
+                {
+                    file.WriteLine("{0},{1},{2},{3},{4}", reader["id"], reader["name"], reader["category"], reader["price"], reader["quantity"]);
+                }
+                file.Close();
+                connection.Close();
+                MessageBox.Show("Seharusnya berhasil");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
 
         }
 
