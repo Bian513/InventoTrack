@@ -58,13 +58,10 @@ namespace InventoTrack
 
         }
 
-        //NEW BUTTON
+        //EDIT BUTTON
         private void button1_Click(object sender, EventArgs e)
         {       
-            nameTextBox.Text = "";
-            categoryBox.Text = "";
-            priceNUD.Text = "0";
-            quantityNUD.Text = "0";
+           
         }
 
         //SAVE BUTTON
@@ -104,7 +101,10 @@ namespace InventoTrack
                 command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
                 command.ExecuteNonQuery();
                 connection.Close();
-                button1_Click(sender, e);
+                nameTextBox.Text = "";
+                categoryComboBox.Text = "";
+                priceNUD.Text = "0";
+                quantityNUD.Text = "0";
                 Form1_Load(sender, e);
             }
         }

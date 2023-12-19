@@ -71,11 +71,11 @@
             this.newButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.newButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.newButton_Click.Location = new System.Drawing.Point(59, 185);
+            this.newButton_Click.Location = new System.Drawing.Point(882, 185);
             this.newButton_Click.Name = "newButton_Click";
             this.newButton_Click.Size = new System.Drawing.Size(320, 50);
             this.newButton_Click.TabIndex = 1;
-            this.newButton_Click.Text = "NEW";
+            this.newButton_Click.Text = "EDIT";
             this.newButton_Click.UseVisualStyleBackColor = false;
             this.newButton_Click.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -85,7 +85,7 @@
             this.saveButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.saveButton_Click.Location = new System.Drawing.Point(469, 185);
+            this.saveButton_Click.Location = new System.Drawing.Point(59, 185);
             this.saveButton_Click.Name = "saveButton_Click";
             this.saveButton_Click.Size = new System.Drawing.Size(320, 50);
             this.saveButton_Click.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.deleteButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.deleteButton_Click.Location = new System.Drawing.Point(882, 185);
+            this.deleteButton_Click.Location = new System.Drawing.Point(469, 185);
             this.deleteButton_Click.Name = "deleteButton_Click";
             this.deleteButton_Click.Size = new System.Drawing.Size(320, 50);
             this.deleteButton_Click.TabIndex = 3;
@@ -116,7 +116,7 @@
             this.updateButton_Click.Name = "updateButton_Click";
             this.updateButton_Click.Size = new System.Drawing.Size(320, 50);
             this.updateButton_Click.TabIndex = 4;
-            this.updateButton_Click.Text = "SHOW REPORT";
+            this.updateButton_Click.Text = "DOWNLOAD REPORT";
             this.updateButton_Click.UseVisualStyleBackColor = false;
             this.updateButton_Click.Click += new System.EventHandler(this.button4_Click);
             // 
