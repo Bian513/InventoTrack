@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -114,7 +115,6 @@ namespace InventoTrack
             try
             {
                 int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
-                //MessageBox.Show(id.ToString());
                 connection.Open();
                 SqlCommand deleteCmd = new SqlCommand("DELETE FROM items WHERE id = @id;", connection);
                 deleteCmd.Parameters.AddWithValue("@id", id);
@@ -131,9 +131,13 @@ namespace InventoTrack
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             Report report = new Report();
             report.Show();
+            
+            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
