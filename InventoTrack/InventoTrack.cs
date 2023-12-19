@@ -81,6 +81,10 @@ namespace InventoTrack
                 editCmd.ExecuteNonQuery();
                 connection.Close();
                 Form1_Load(sender, e);
+                nameTextBox.Text = "";
+                categoryComboBox.Text = "";
+                priceNUD.Text = "0";
+                quantityNUD.Text = "0";
             }
             catch (Exception err)
             {
@@ -125,11 +129,11 @@ namespace InventoTrack
                 command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
                 command.ExecuteNonQuery();
                 connection.Close();
+                Form1_Load(sender, e);
                 nameTextBox.Text = "";
                 categoryComboBox.Text = "";
                 priceNUD.Text = "0";
                 quantityNUD.Text = "0";
-                Form1_Load(sender, e);
             }
         }
 
