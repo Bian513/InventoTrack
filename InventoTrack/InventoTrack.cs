@@ -14,16 +14,11 @@ namespace InventoTrack
 {
     public partial class InventoTrack : Form
     {
-        DataTable inventory = new DataTable();
         
         SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
 
         public InventoTrack()
         {
-            inventory.Columns.Add("Name");
-            inventory.Columns.Add("Category");
-            inventory.Columns.Add("Price");
-            inventory.Columns.Add("Quantity");
             InitializeComponent();
         }
 
