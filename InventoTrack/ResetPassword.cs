@@ -74,7 +74,7 @@ namespace InventoTrack
             try
             {
                 smtp.Send(message);
-                MessageBox.Show("Kode OTP Berhasil dikirimkan");
+                MessageBox.Show("Kode OTP Berhasil dikirimkan, silahkan cek email anda");
             }
             catch (Exception ex)
             {
@@ -104,7 +104,7 @@ namespace InventoTrack
                     command.Parameters.AddWithValue("@email", email);
                     command.Parameters.AddWithValue("@Password", password);
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Password has been reset");
+                    MessageBox.Show("Password has been reset, Please Login");
                     connection.Close();
                     LandingPage landingPage = new LandingPage();
                     landingPage.Show();

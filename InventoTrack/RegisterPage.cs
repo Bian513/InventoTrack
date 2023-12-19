@@ -64,7 +64,7 @@ namespace InventoTrack
                         insertCommand.Parameters.AddWithValue("@Email", email);
                         insertCommand.Parameters.AddWithValue("@Password", password);
                         insertCommand.ExecuteNonQuery();
-                        MessageBox.Show($"Register Success, welcome {username}");
+                        MessageBox.Show($"Register Success, welcome {username} Please Login");
                         connection.Close();
                         LandingPage landingPage = new LandingPage();
                         landingPage.Show();
@@ -110,7 +110,7 @@ namespace InventoTrack
                 message.Body = messageBody;
                 message.Subject = "Kode Verifikasi OTP";
                 smtp.Send(message);
-                MessageBox.Show("Kode OTP Berhasil dikirimkan");
+                MessageBox.Show("Kode OTP Berhasil dikirimkan, silahkan cek email anda");
             }
             catch
             {

@@ -147,8 +147,27 @@
             // 
             // categoryComboBox
             // 
+            this.categoryComboBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "Makanan",
+            "Minuman",
+            "Deterjen",
+            "Susu",
+            "Rokok",
+            "Alat Tulis",
+            "Sabun",
+            "Shampoo",
+            "Penyedap Rasa",
+            "Parfum",
+            "Pampers",
+            "Pasta gigi",
+            "Sikat gigi",
+            "Obat-obatan",
+            "Kosmetik",
+            ""});
+            this.categoryComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.categoryComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.categoryComboBox.BackColor = System.Drawing.Color.Gainsboro;
-            this.categoryComboBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.categoryComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.categoryComboBox.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryComboBox.FormattingEnabled = true;
             this.categoryComboBox.Items.AddRange(new object[] {
@@ -161,7 +180,12 @@
             "Sabun",
             "Shampoo",
             "Penyedap Rasa",
-            "Parfum"});
+            "Parfum",
+            "Pampers",
+            "Pasta gigi",
+            "Sikat gigi",
+            "Obat-obatan",
+            "Kosmetik"});
             this.categoryComboBox.Location = new System.Drawing.Point(59, 129);
             this.categoryComboBox.Name = "categoryComboBox";
             this.categoryComboBox.Size = new System.Drawing.Size(450, 26);
@@ -172,7 +196,7 @@
             // 
             this.priceNUD.BackColor = System.Drawing.Color.Gainsboro;
             this.priceNUD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.priceNUD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.priceNUD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.priceNUD.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.priceNUD.Increment = new decimal(new int[] {
             500,
@@ -195,7 +219,7 @@
             // 
             this.quantityNUD.BackColor = System.Drawing.Color.Gainsboro;
             this.quantityNUD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.quantityNUD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.quantityNUD.Cursor = System.Windows.Forms.Cursors.Hand;
             this.quantityNUD.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityNUD.Location = new System.Drawing.Point(752, 130);
             this.quantityNUD.Maximum = new decimal(new int[] {

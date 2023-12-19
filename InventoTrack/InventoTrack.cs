@@ -165,7 +165,7 @@ namespace InventoTrack
                 SqlCommand selectAll = new SqlCommand("SELECT * FROM items;", connection);
                 SqlDataReader reader = selectAll.ExecuteReader();
                 string pathFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string fileName = "inventoTrack.csv";
+                string fileName = "InventoTrack.csv";
                 string filePath = Path.Combine(pathFolder, fileName);
                 StreamWriter file = new StreamWriter(filePath);
                 file.WriteLine("id,name,category,price,quantity");
@@ -175,7 +175,7 @@ namespace InventoTrack
                 }
                 file.Close();
                 connection.Close();
-                MessageBox.Show("Seharusnya berhasil");
+                MessageBox.Show("Report berhasil disimpan di folder Document dengan nama file InventoTrack.csv");
             }
             catch (Exception err)
             {
@@ -219,19 +219,6 @@ namespace InventoTrack
 
         }
 
-        private void button_toLogin_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
-        private void button_toRegister_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegisterForm registerForm = new RegisterForm();
-            registerForm.Show();
-        }
 
         private void priceNumericUpdown_Click(object sender, EventArgs e)
         {
@@ -255,6 +242,7 @@ namespace InventoTrack
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            MessageBox.Show("Berhasil Keluar");
             this.Hide();
             LandingPage landingpage = new LandingPage();
             landingpage.Show();

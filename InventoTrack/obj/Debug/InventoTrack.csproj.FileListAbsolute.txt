@@ -296,9 +296,7 @@ C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\Inven
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe.config
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.InventoTrack.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LandingPage.resources
-C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LoginForm.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Properties.Resources.resources
-C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterForm.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterPage.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Report.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.ResetPassword.resources

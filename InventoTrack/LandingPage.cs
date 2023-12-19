@@ -29,7 +29,7 @@ namespace InventoTrack
 
         private void newButton(object sender, EventArgs e)
         {
-            string otp = textBox_otp.Text;
+            //string otp = textBox_otp.Text;
             //if (randomCode == otp)
             //{
                 string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
@@ -69,13 +69,6 @@ namespace InventoTrack
         private void usernameTextBox_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            RegisterPage registerpage = new RegisterPage();
-            registerpage.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -145,6 +138,13 @@ namespace InventoTrack
             {
                 MessageBox.Show("Isi username dan password terlebih dahulu");
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterPage registerpage = new RegisterPage();
+            registerpage.Show();
         }
     }
 }
