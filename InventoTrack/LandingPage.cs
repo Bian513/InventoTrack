@@ -15,7 +15,7 @@ namespace InventoTrack
 {
     public partial class LandingPage : Form
     {
-        String randomCode;
+        string randomCode;
         public LandingPage()
         {
             InitializeComponent();
@@ -29,48 +29,37 @@ namespace InventoTrack
 
         private void newButton(object sender, EventArgs e)
         {
-            //string otp = textBox_otp.Text;
-            //if (randomCode == otp)
-            //{
-                string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
-                SqlConnection connection = new SqlConnection(connectionString);
-                string username = usernameTextBox.Text;
-                string password = passwordTextBox.Text;
-                string query = $"DECLARE @Username VARCHAR(50) = '{username}';DECLARE @Password VARCHAR(50) = '{password}';SELECT dbo.CheckUserLogin(@Username, @Password);";
-                try
+            string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
+            SqlConnection connection = new SqlConnection(connectionString);
+            string username = usernameTextBox.Text;
+            string password = passwordTextBox.Text;
+            string query = $"DECLARE @Username VARCHAR(50) = '{username}';DECLARE @Password VARCHAR(50) = '{password}';SELECT dbo.CheckUserLogin(@Username, @Password);";
+            try
+            {
+                connection.Open();
+                SqlCommand cmd = new SqlCommand(query, connection);
+                if ((bool)cmd.ExecuteScalar() != true)
                 {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand(query, connection);
-
-
-                    if ((bool)cmd.ExecuteScalar() != true)
-                    {
-                        throw new Exception("Error Loggin in");
-                    }
-                    SqlCommand selectEmail = new SqlCommand ("SELECT email FROM users WHERE username = @username AND password = @password;", connection);
-                    selectEmail.Parameters.AddWithValue("@username", username);
-                    selectEmail.Parameters.AddWithValue("@password", password);
-                    string email = (string)selectEmail.ExecuteScalar();
-                    SqlCommand selectId = new SqlCommand("SELECT id FROM users WHERE email= @email;", connection);
-                    selectId.Parameters.AddWithValue("@email", email);
-                    int id = (int)selectId.ExecuteScalar();
-                    connection.Close();
-                    MessageBox.Show($"Log in Success, welcome {id},{username},{email},{password}");
-                    this.Hide();
-                    InventoTrack inventoTrack = new InventoTrack(id, username, email, password);
-                    inventoTrack.Show();
-
+                    throw new Exception("Error Loggin in");
                 }
-                catch (Exception ex)
-                {
-                    connection.Close();
-                    MessageBox.Show(ex.Message);
+                SqlCommand selectEmail = new SqlCommand ("SELECT email FROM users WHERE username = @username AND password = @password;", connection);
+                selectEmail.Parameters.AddWithValue("@username", username);
+                selectEmail.Parameters.AddWithValue("@password", password);
+                string email = (string)selectEmail.ExecuteScalar();
+                SqlCommand selectId = new SqlCommand("SELECT id FROM users WHERE email= @email;", connection);
+                selectId.Parameters.AddWithValue("@email", email);
+                int id = (int)selectId.ExecuteScalar();
+                connection.Close();
+                MessageBox.Show($"Log in Success, welcome {id},{username},{email},{password}");
+                this.Hide();
+                InventoTrack inventoTrack = new InventoTrack(id, username, email, password);
+                inventoTrack.Show();
                 }
-            //}
-            //else
-            //{
-                //MessageBox.Show("Kode OTP Salah");
-            //}
+            catch (Exception ex)
+            {
+                connection.Close();
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void usernameTextBox_TextChanged(object sender, EventArgs e)
@@ -105,47 +94,7 @@ namespace InventoTrack
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string username = usernameTextBox.Text;
-            string password = passwordTextBox.Text;
-            string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            string commandString = "SELECT email FROM users WHERE username = @username AND password = @password;";
-            SqlCommand command = new SqlCommand(commandString, connection);
-            command.Parameters.AddWithValue("@Username", username);
-            command.Parameters.AddWithValue("@Password", password);
-            string email = (string)command.ExecuteScalar();
-
-            try
-            {
-                String from, pass, messageBody, to;
-                Random rand = new Random();
-                randomCode = (rand.Next(999999)).ToString();
-                to = email;
-                from = "inventotrack@gmail.com";
-                pass = "nrig zldn uoge jwhc";
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                smtp.EnableSsl = true;
-                smtp.Port = 587;
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential(from, pass);
-
-                MailMessage message = new MailMessage();
-                messageBody = "Terimakasih telah mencoba mendaftar di aplikasi InventoTrack, berikut merupakan kode OTP: " + randomCode;
-                message.To.Add(to);
-                message.From = new MailAddress(from);
-                message.Body = messageBody;
-                message.Subject = "Kode Verifikasi OTP";
-                smtp.Send(message);
-                MessageBox.Show("Kode OTP Berhasil dikirimkan");
-            }
-            catch
-            {
-                MessageBox.Show("Isi username dan password terlebih dahulu");
-            }
-        }
+        
 
         private void button1_Click_1(object sender, EventArgs e)
         {

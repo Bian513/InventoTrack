@@ -16,7 +16,7 @@ namespace InventoTrack
 {
     public partial class ResetPassword : Form
     {
-        String randomCode;
+        string randomCode;
         string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
         public ResetPassword()
         {
@@ -51,30 +51,11 @@ namespace InventoTrack
         private void button2_Click(object sender, EventArgs e)
         {
             string email = usernameTextBox.Text;
-
-            String from, pass, messageBody, to;
             Random rand = new Random();
             randomCode = (rand.Next(999999)).ToString();
-            to = email;
-            from = "inventotrack@gmail.com";
-            pass = "nrig zldn uoge jwhc";
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-            smtp.EnableSsl = true;
-            smtp.Port = 587;
-            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Credentials = new NetworkCredential(from, pass);
-
-            MailMessage message = new MailMessage();
-            messageBody = "Terimakasih telah mencoba mendaftar di aplikasi InventoTrack, berikut merupakan kode OTP: " + randomCode;
-            message.To.Add(to);
-            message.From = new MailAddress(from);
-            message.Body = messageBody;
-            message.Subject = "Kode Verifikasi OTP";
-
             try
             {
-                smtp.Send(message);
-                MessageBox.Show("Kode OTP Berhasil dikirimkan, silahkan cek email anda");
+                Users.sendOTP(email, randomCode);
             }
             catch (Exception ex)
             {
@@ -100,10 +81,10 @@ namespace InventoTrack
                     SqlConnection connection = new SqlConnection(connectionString);
                     connection.Open();
                     string commandString = "UPDATE users SET password = @password WHERE email = @email;";
-                    SqlCommand command = new SqlCommand(commandString, connection);
-                    command.Parameters.AddWithValue("@email", email);
-                    command.Parameters.AddWithValue("@Password", password);
-                    command.ExecuteNonQuery();
+                    SqlCommand updatePw = new SqlCommand(commandString, connection);
+                    updatePw.Parameters.AddWithValue("@email", email);
+                    updatePw.Parameters.AddWithValue("@Password", password);
+                    updatePw.ExecuteNonQuery();
                     MessageBox.Show("Password has been reset, Please Login");
                     connection.Close();
                     LandingPage landingPage = new LandingPage();

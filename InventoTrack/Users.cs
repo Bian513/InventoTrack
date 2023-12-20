@@ -4,6 +4,8 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +27,30 @@ namespace InventoTrack
             Email = email;
             Password = password;
         }
+
+        public static void sendOTP(string email, string randomCode)
+        {
+            String from, pass, messageBody, to;
+            to = email;
+            from = "inventotrack@gmail.com";
+            pass = "nrig zldn uoge jwhc";
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+            smtp.EnableSsl = true;
+            smtp.Port = 587;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Credentials = new NetworkCredential(from, pass);
+
+            MailMessage message = new MailMessage();
+            messageBody = "Terimakasih telah mencoba mendaftar di aplikasi InventoTrack, berikut merupakan kode OTP: " + randomCode;
+            message.To.Add(to);
+            message.From = new MailAddress(from);
+            message.Body = messageBody;
+            message.Subject = "Kode Verifikasi OTP";
+            smtp.Send(message);
+            MessageBox.Show("Kode OTP Berhasil dikirimkan");
+        }
+
+
         public void addItem(string name, string category, string price, string quantity)
         {
             SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
@@ -88,5 +114,6 @@ namespace InventoTrack
             file.Close();
             connection.Close();
         }
+        
     }
 }

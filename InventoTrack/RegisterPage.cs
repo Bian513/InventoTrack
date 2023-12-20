@@ -88,29 +88,11 @@ namespace InventoTrack
         private void button2_Click(object sender, EventArgs e)
         {
             string email = emailTextBox.Text;
-            
             try
             {
-                String from, pass, messageBody, to;
                 Random rand = new Random();
                 randomCode = (rand.Next(999999)).ToString();
-                to = email;
-                from = "inventotrack@gmail.com";
-                pass = "nrig zldn uoge jwhc";
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                smtp.EnableSsl = true;
-                smtp.Port = 587;
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential(from, pass);
-
-                MailMessage message = new MailMessage();
-                messageBody = "Terimakasih telah mencoba mendaftar di aplikasi InventoTrack, berikut merupakan kode OTP: " + randomCode;
-                message.To.Add(to);
-                message.From = new MailAddress(from);
-                message.Body = messageBody;
-                message.Subject = "Kode Verifikasi OTP";
-                smtp.Send(message);
-                MessageBox.Show("Kode OTP Berhasil dikirimkan, silahkan cek email anda");
+                Users.sendOTP(email, randomCode);
             }
             catch
             {
