@@ -142,20 +142,7 @@ namespace InventoTrack
         {
             try
             {
-                connection.Open();
-                SqlCommand selectAll = new SqlCommand("SELECT * FROM items;", connection);
-                SqlDataReader reader = selectAll.ExecuteReader();
-                string pathFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string fileName = "InventoTrack.csv";
-                string filePath = Path.Combine(pathFolder, fileName);
-                StreamWriter file = new StreamWriter(filePath);
-                file.WriteLine("id,name,category,price,quantity");
-                while (reader.Read())
-                {
-                    file.WriteLine("{0},{1},{2},{3},{4}", reader["id"], reader["name"], reader["category"], reader["price"], reader["quantity"]);
-                }
-                file.Close();
-                connection.Close();
+                users.exportItems();
                 MessageBox.Show("Report berhasil disimpan di folder Document dengan nama file InventoTrack.csv");
             }
             catch (Exception err)

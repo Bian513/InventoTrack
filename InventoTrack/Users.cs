@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,6 +68,24 @@ namespace InventoTrack
             SqlCommand deleteCmd = new SqlCommand("DELETE FROM items WHERE id = @id;", connection);
             deleteCmd.Parameters.AddWithValue("@id", id);
             deleteCmd.ExecuteNonQuery();
+            connection.Close();
+        }
+        public void exportItems()
+        {
+            SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+            connection.Open();
+            SqlCommand selectAll = new SqlCommand("SELECT * FROM items;", connection);
+            SqlDataReader reader = selectAll.ExecuteReader();
+            string pathFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string fileName = "InventoTrack.csv";
+            string filePath = Path.Combine(pathFolder, fileName);
+            StreamWriter file = new StreamWriter(filePath);
+            file.WriteLine("id,name,category,price,quantity");
+            while (reader.Read())
+            {
+                file.WriteLine("{0},{1},{2},{3},{4}", reader["id"], reader["name"], reader["category"], reader["price"], reader["quantity"]);
+            }
+            file.Close();
             connection.Close();
         }
     }
