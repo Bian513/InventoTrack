@@ -15,7 +15,6 @@ namespace InventoTrack
 {
     public partial class LandingPage : Form
     {
-        string randomCode;
         public LandingPage()
         {
             InitializeComponent();
@@ -29,27 +28,18 @@ namespace InventoTrack
 
         private void newButton(object sender, EventArgs e)
         {
-            string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
-            SqlConnection connection = new SqlConnection(connectionString);
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
-            string query = $"DECLARE @Username VARCHAR(50) = '{username}';DECLARE @Password VARCHAR(50) = '{password}';SELECT dbo.CheckUserLogin(@Username, @Password);";
+            
             try
             {
-                connection.Open();
-                SqlCommand cmd = new SqlCommand(query, connection);
-                if ((bool)cmd.ExecuteScalar() != true)
+                bool isCanLogin = Users.checkUserLogin(username, password);
+                if (isCanLogin != true)
                 {
                     throw new Exception("Error Loggin in");
                 }
-                SqlCommand selectEmail = new SqlCommand ("SELECT email FROM users WHERE username = @username AND password = @password;", connection);
-                selectEmail.Parameters.AddWithValue("@username", username);
-                selectEmail.Parameters.AddWithValue("@password", password);
-                string email = (string)selectEmail.ExecuteScalar();
-                SqlCommand selectId = new SqlCommand("SELECT id FROM users WHERE email= @email;", connection);
-                selectId.Parameters.AddWithValue("@email", email);
-                int id = (int)selectId.ExecuteScalar();
-                connection.Close();
+                string email = Users.getEmail(username, password);
+                int id = Users.getUserId(email);
                 MessageBox.Show($"Log in Success, welcome {id},{username},{email},{password}");
                 this.Hide();
                 InventoTrack inventoTrack = new InventoTrack(id, username, email, password);
@@ -57,7 +47,6 @@ namespace InventoTrack
                 }
             catch (Exception ex)
             {
-                connection.Close();
                 MessageBox.Show(ex.Message);
             }
         }

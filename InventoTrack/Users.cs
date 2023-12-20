@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace InventoTrack
 {
@@ -49,7 +51,51 @@ namespace InventoTrack
             smtp.Send(message);
             MessageBox.Show("Kode OTP Berhasil dikirimkan");
         }
+        public static void updatePassword(string email, string password)
+        {
+            SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+            connection.Open();
+            string commandString = "UPDATE users SET password = @password WHERE email = @email;";
+            SqlCommand updatePw = new SqlCommand(commandString, connection);
+            updatePw.Parameters.AddWithValue("@email", email);
+            updatePw.Parameters.AddWithValue("@Password", password);
+            updatePw.ExecuteNonQuery();
+            MessageBox.Show("Password has been reset, Please Login");
+            connection.Close();
+        }
+        public static string getEmail(string username, string password)
+        {
+            SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+            connection.Open();
+            SqlCommand selectEmail = new SqlCommand("SELECT email FROM users WHERE username = @username AND password = @password;", connection);
+            selectEmail.Parameters.AddWithValue("@username", username);
+            selectEmail.Parameters.AddWithValue("@password", password);
+            string email = (string)selectEmail.ExecuteScalar();
+            connection.Close();
+            return email;
+        }
+        public static int getUserId(string email)
+        {
+            SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+            connection.Open();
+            SqlCommand selectId = new SqlCommand("SELECT id FROM users WHERE email= @email;", connection);
+            selectId.Parameters.AddWithValue("@email", email);
+            int id = (int)selectId.ExecuteScalar();
+            connection.Close();
+            return id;
+        }
+        public static bool checkUserLogin(string username, string password)
+        {
+            SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+            connection.Open();
+            SqlCommand cul = new SqlCommand("SELECT dbo.CheckUserLogin(@Username, @Password);", connection);
+            cul.Parameters.AddWithValue("@Username", username);
+            cul.Parameters.AddWithValue("@Password", password);
+            bool isCanLogin = (bool)cul.ExecuteScalar();
 
+            connection.Close();
+            return isCanLogin;
+        }
 
         public void addItem(string name, string category, string price, string quantity)
         {

@@ -17,7 +17,6 @@ namespace InventoTrack
     public partial class ResetPassword : Form
     {
         string randomCode;
-        string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
         public ResetPassword()
         {
             InitializeComponent();
@@ -53,14 +52,7 @@ namespace InventoTrack
             string email = usernameTextBox.Text;
             Random rand = new Random();
             randomCode = (rand.Next(999999)).ToString();
-            try
-            {
-                Users.sendOTP(email, randomCode);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Users.sendOTP(email, randomCode);
         }
 
         private void usernameTextBox_TextChanged(object sender, EventArgs e)
@@ -76,24 +68,19 @@ namespace InventoTrack
 
             if (randomCode == otp)
             {
-                try
+                if (email != "")
                 {
-                    SqlConnection connection = new SqlConnection(connectionString);
-                    connection.Open();
-                    string commandString = "UPDATE users SET password = @password WHERE email = @email;";
-                    SqlCommand updatePw = new SqlCommand(commandString, connection);
-                    updatePw.Parameters.AddWithValue("@email", email);
-                    updatePw.Parameters.AddWithValue("@Password", password);
-                    updatePw.ExecuteNonQuery();
-                    MessageBox.Show("Password has been reset, Please Login");
-                    connection.Close();
-                    LandingPage landingPage = new LandingPage();
-                    landingPage.Show();
-                    this.Hide();
-                }
-                catch
-                {
-                    MessageBox.Show("Isi email terlebih dahulu");
+                    try
+                    {
+                        Users.updatePassword(email,password);
+                        LandingPage landingPage = new LandingPage();
+                        landingPage.Show();
+                        this.Hide();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Isi email terlebih dahulu");
+                    }
                 }
             }
             else
