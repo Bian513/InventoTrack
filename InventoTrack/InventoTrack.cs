@@ -16,12 +16,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace InventoTrack
 {
     public partial class InventoTrack : Form
-    {
-        
+    {        
         SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
-        public InventoTrack()
+        Users users;
+        public InventoTrack(int userId, string userName, string userEmail, string userPassword)
         {
             InitializeComponent();
+            users = new Users(userId,userName, userEmail, userPassword);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -71,15 +72,7 @@ namespace InventoTrack
                 string price = priceNUD.Text;
                 string quantity = quantityNUD.Text;
                 int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
-                connection.Open();
-                SqlCommand editCmd = new SqlCommand("UPDATE items SET name = @name, category = @category, price = @price, quantity = @quantity WHERE id = @id;", connection);
-                editCmd.Parameters.AddWithValue("@name", name);
-                editCmd.Parameters.AddWithValue("@category", category);
-                editCmd.Parameters.AddWithValue("@price", int.Parse(price));
-                editCmd.Parameters.AddWithValue("@quantity", int.Parse(quantity));
-                editCmd.Parameters.AddWithValue("@id", id);
-                editCmd.ExecuteNonQuery();
-                connection.Close();
+                users.updateItem(id, name, category, price, quantity);
                 Form1_Load(sender, e);
                 nameTextBox.Text = "";
                 categoryComboBox.Text = "";
@@ -120,25 +113,7 @@ namespace InventoTrack
             }
             else
             {
-                connection.Open();
-                SqlCommand checkName = new SqlCommand("SELECT COUNT(*) FROM items WHERE name = @name;", connection);
-                checkName.Parameters.AddWithValue("@name", name);
-                int count = (int)checkName.ExecuteScalar();
-                if (count > 0)
-                {
-                    MessageBox.Show("Product has already exist, you can edit the product or change the name of product");
-                }
-                else
-                {
-                    string commandString = "INSERT INTO items (name, category, price, quantity) VALUES (@name, @category, @price, @quantity);";
-                    SqlCommand command = new SqlCommand(commandString, connection);
-                    command.Parameters.AddWithValue("@name", name);
-                    command.Parameters.AddWithValue("@category", category);
-                    command.Parameters.AddWithValue("@price", int.Parse(price));
-                    command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
-                    command.ExecuteNonQuery();
-                }
-                connection.Close();
+                users.addItem(name, category, price, quantity);
                 Form1_Load(sender, e);
                 nameTextBox.Text = "";
                 categoryComboBox.Text = "";
@@ -153,11 +128,7 @@ namespace InventoTrack
             try
             {
                 int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
-                connection.Open();
-                SqlCommand deleteCmd = new SqlCommand("DELETE FROM items WHERE id = @id;", connection);
-                deleteCmd.Parameters.AddWithValue("@id", id);
-                deleteCmd.ExecuteNonQuery();
-                connection.Close();
+                users.deleteItem(id);
                 Form1_Load(sender, e);
             }
             catch (Exception err)

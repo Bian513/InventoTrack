@@ -55,10 +55,9 @@ namespace InventoTrack
                     selectId.Parameters.AddWithValue("@email", email);
                     int id = (int)selectId.ExecuteScalar();
                     connection.Close();
-                    Users user = new Users(id,username,email,password);
-                    MessageBox.Show($"Log in Success, welcome {user.Id},{user.Username},{user.Email},{user.Password}");
+                    MessageBox.Show($"Log in Success, welcome {id},{username},{email},{password}");
                     this.Hide();
-                    InventoTrack inventoTrack = new InventoTrack();
+                    InventoTrack inventoTrack = new InventoTrack(id, username, email, password);
                     inventoTrack.Show();
 
                 }
