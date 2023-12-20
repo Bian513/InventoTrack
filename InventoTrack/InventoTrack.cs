@@ -121,13 +121,23 @@ namespace InventoTrack
             else
             {
                 connection.Open();
-                string commandString = "INSERT INTO items (name, category, price, quantity) VALUES (@name, @category, @price, @quantity);";
-                SqlCommand command = new SqlCommand(commandString, connection);
-                command.Parameters.AddWithValue("@name", name);
-                command.Parameters.AddWithValue("@category", category);
-                command.Parameters.AddWithValue("@price", int.Parse(price));
-                command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
-                command.ExecuteNonQuery();
+                SqlCommand checkName = new SqlCommand("SELECT COUNT(*) FROM items WHERE name = @name;", connection);
+                checkName.Parameters.AddWithValue("@name", name);
+                int count = (int)checkName.ExecuteScalar();
+                if (count > 0)
+                {
+                    MessageBox.Show("Product has already exist, you can edit the product or change the name of product");
+                }
+                else
+                {
+                    string commandString = "INSERT INTO items (name, category, price, quantity) VALUES (@name, @category, @price, @quantity);";
+                    SqlCommand command = new SqlCommand(commandString, connection);
+                    command.Parameters.AddWithValue("@name", name);
+                    command.Parameters.AddWithValue("@category", category);
+                    command.Parameters.AddWithValue("@price", int.Parse(price));
+                    command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
+                    command.ExecuteNonQuery();
+                }
                 connection.Close();
                 Form1_Load(sender, e);
                 nameTextBox.Text = "";
