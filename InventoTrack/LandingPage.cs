@@ -47,8 +47,16 @@ namespace InventoTrack
                     {
                         throw new Exception("Error Loggin in");
                     }
+                    SqlCommand selectEmail = new SqlCommand ("SELECT email FROM users WHERE username = @username AND password = @password;", connection);
+                    selectEmail.Parameters.AddWithValue("@username", username);
+                    selectEmail.Parameters.AddWithValue("@password", password);
+                    string email = (string)selectEmail.ExecuteScalar();
+                    SqlCommand selectId = new SqlCommand("SELECT id FROM users WHERE email= @email;", connection);
+                    selectId.Parameters.AddWithValue("@email", email);
+                    int id = (int)selectId.ExecuteScalar();
                     connection.Close();
-                    MessageBox.Show($"Log in Success, welcome {username}");
+                    Users user = new Users(id,username,email,password);
+                    MessageBox.Show($"Log in Success, welcome {user.Id},{user.Username},{user.Email},{user.Password}");
                     this.Hide();
                     InventoTrack inventoTrack = new InventoTrack();
                     inventoTrack.Show();
