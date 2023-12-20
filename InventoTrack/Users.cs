@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace InventoTrack
 {
-    internal class Users
+    public class Users
     {
         public int Id { get; set; }
         public string Username { get; set; }

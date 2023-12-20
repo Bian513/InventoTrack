@@ -15,6 +15,9 @@ namespace InventoTrack
 {
     public partial class LandingPage : Form
     {
+        public string Username { get; set; }
+        public string Password { get; set; }
+
         public LandingPage()
         {
             InitializeComponent();
