@@ -36,7 +36,7 @@
             this.signupButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.sendotpButton = new System.Windows.Forms.Button();
             this.textBox_otp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -124,20 +124,20 @@
             this.emailTextBox.Size = new System.Drawing.Size(326, 26);
             this.emailTextBox.TabIndex = 15;
             // 
-            // button2
+            // sendotpButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(694, 428);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 34);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "SEND OTP";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.sendotpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.sendotpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sendotpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sendotpButton.ForeColor = System.Drawing.Color.White;
+            this.sendotpButton.Location = new System.Drawing.Point(694, 428);
+            this.sendotpButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.sendotpButton.Name = "sendotpButton";
+            this.sendotpButton.Size = new System.Drawing.Size(113, 34);
+            this.sendotpButton.TabIndex = 18;
+            this.sendotpButton.Text = "SEND OTP";
+            this.sendotpButton.UseVisualStyleBackColor = false;
+            this.sendotpButton.Click += new System.EventHandler(this.sendotpButton_Click);
             // 
             // textBox_otp
             // 
@@ -167,7 +167,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_LandingPage;
             this.ClientSize = new System.Drawing.Size(1283, 682);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.sendotpButton);
             this.Controls.Add(this.textBox_otp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.emailTextBox);
@@ -197,7 +197,7 @@
         private System.Windows.Forms.Button signupButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button sendotpButton;
         private System.Windows.Forms.TextBox textBox_otp;
         private System.Windows.Forms.Label label2;
     }

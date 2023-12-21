@@ -22,6 +22,43 @@ namespace InventoTrack
             InitializeComponent();
         }
 
+        private void sendotpButton_Click(object sender, EventArgs e)
+        {
+            string email = usernameTextBox.Text;
+            Random rand = new Random();
+            randomCode = (rand.Next(999999)).ToString();
+            Users.sendOTP(email, randomCode);
+        }
+
+        private void resetpasswordButton_Click(object sender, EventArgs e)
+        {
+            string email = usernameTextBox.Text;
+            string password = passwordTextBox.Text;
+            string otp = textBox_otp.Text;
+
+            if (randomCode == otp)
+            {
+                if (email != "")
+                {
+                    try
+                    {
+                        Users.updatePassword(email, password);
+                        LandingPage landingPage = new LandingPage();
+                        landingPage.Show();
+                        this.Hide();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Isi email terlebih dahulu");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Kode OTP salah");
+            }
+        }
+
         private void usernameLabel_Click(object sender, EventArgs e)
         {
 
@@ -47,14 +84,6 @@ namespace InventoTrack
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string email = usernameTextBox.Text;
-            Random rand = new Random();
-            randomCode = (rand.Next(999999)).ToString();
-            Users.sendOTP(email, randomCode);
-        }
-
         private void usernameTextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -62,33 +91,8 @@ namespace InventoTrack
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            string email = usernameTextBox.Text;
-            string password = passwordTextBox.Text;
-            string otp = textBox_otp.Text;
-
-            if (randomCode == otp)
-            {
-                if (email != "")
-                {
-                    try
-                    {
-                        Users.updatePassword(email,password);
-                        LandingPage landingPage = new LandingPage();
-                        landingPage.Show();
-                        this.Hide();
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Isi email terlebih dahulu");
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Kode OTP salah");
-            }
-            
 
         }
+
     }
 }

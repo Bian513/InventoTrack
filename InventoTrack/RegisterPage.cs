@@ -21,16 +21,6 @@ namespace InventoTrack
             InitializeComponent();
         }
 
-        private void RegisterPage_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void signupButton_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;
@@ -85,7 +75,7 @@ namespace InventoTrack
             
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void sendotpButton_Click(object sender, EventArgs e)
         {
             string email = emailTextBox.Text;
             try
@@ -99,5 +89,16 @@ namespace InventoTrack
                 MessageBox.Show("Isi email terlebih dahulu");
             }
         }
+
+        private void RegisterPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

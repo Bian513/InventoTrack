@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetPassword));
-            this.button_sendOtp = new System.Windows.Forms.Button();
+            this.sendotpButton = new System.Windows.Forms.Button();
             this.textBox_otp = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.loginButton = new System.Windows.Forms.Button();
+            this.resetpasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button_sendOtp
+            // sendotpButton
             // 
-            this.button_sendOtp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button_sendOtp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_sendOtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_sendOtp.ForeColor = System.Drawing.Color.White;
-            this.button_sendOtp.Location = new System.Drawing.Point(671, 367);
-            this.button_sendOtp.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.button_sendOtp.Name = "button_sendOtp";
-            this.button_sendOtp.Size = new System.Drawing.Size(139, 34);
-            this.button_sendOtp.TabIndex = 19;
-            this.button_sendOtp.Text = "SEND OTP";
-            this.button_sendOtp.UseVisualStyleBackColor = false;
-            this.button_sendOtp.Click += new System.EventHandler(this.button2_Click);
+            this.sendotpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.sendotpButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sendotpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sendotpButton.ForeColor = System.Drawing.Color.White;
+            this.sendotpButton.Location = new System.Drawing.Point(671, 367);
+            this.sendotpButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.sendotpButton.Name = "sendotpButton";
+            this.sendotpButton.Size = new System.Drawing.Size(139, 34);
+            this.sendotpButton.TabIndex = 19;
+            this.sendotpButton.Text = "SEND OTP";
+            this.sendotpButton.UseVisualStyleBackColor = false;
+            this.sendotpButton.Click += new System.EventHandler(this.sendotpButton_Click);
             // 
             // textBox_otp
             // 
@@ -127,20 +127,20 @@
             this.usernameTextBox.TabIndex = 13;
             this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
-            // loginButton
+            // resetpasswordButton
             // 
-            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(21)))), ((int)(((byte)(200)))));
-            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(460, 428);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(350, 65);
-            this.loginButton.TabIndex = 12;
-            this.loginButton.Text = "RESET PASSWORD";
-            this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            this.resetpasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(21)))), ((int)(((byte)(200)))));
+            this.resetpasswordButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resetpasswordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resetpasswordButton.ForeColor = System.Drawing.Color.White;
+            this.resetpasswordButton.Location = new System.Drawing.Point(460, 428);
+            this.resetpasswordButton.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.resetpasswordButton.Name = "resetpasswordButton";
+            this.resetpasswordButton.Size = new System.Drawing.Size(350, 65);
+            this.resetpasswordButton.TabIndex = 12;
+            this.resetpasswordButton.Text = "RESET PASSWORD";
+            this.resetpasswordButton.UseVisualStyleBackColor = false;
+            this.resetpasswordButton.Click += new System.EventHandler(this.resetpasswordButton_Click);
             // 
             // ResetPassword
             // 
@@ -148,14 +148,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_LandingPage;
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.button_sendOtp);
+            this.Controls.Add(this.sendotpButton);
             this.Controls.Add(this.textBox_otp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.usernameTextBox);
-            this.Controls.Add(this.loginButton);
+            this.Controls.Add(this.resetpasswordButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ResetPassword";
@@ -168,13 +168,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button_sendOtp;
+        private System.Windows.Forms.Button sendotpButton;
         private System.Windows.Forms.TextBox textBox_otp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button resetpasswordButton;
     }
 }

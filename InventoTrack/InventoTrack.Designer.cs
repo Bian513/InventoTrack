@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoTrack));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.newButton_Click = new System.Windows.Forms.Button();
-            this.saveButton_Click = new System.Windows.Forms.Button();
-            this.deleteButton_Click = new System.Windows.Forms.Button();
-            this.downloadButton_Click = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.editButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.downloadreportButton = new System.Windows.Forms.Button();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.TextBox1 = new System.Windows.Forms.Label();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
@@ -42,83 +42,83 @@
             this.categoryBox = new System.Windows.Forms.Label();
             this.priceNumericUpdown = new System.Windows.Forms.Label();
             this.quantityNumericUpDown = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.signoutButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNUD)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(59, 246);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1143, 276);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(59, 246);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(30);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 62;
+            this.dataGridView.RowTemplate.Height = 28;
+            this.dataGridView.Size = new System.Drawing.Size(1143, 276);
+            this.dataGridView.TabIndex = 0;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
-            // newButton_Click
+            // editButton
             // 
-            this.newButton_Click.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.newButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.newButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.newButton_Click.Location = new System.Drawing.Point(882, 185);
-            this.newButton_Click.Name = "newButton_Click";
-            this.newButton_Click.Size = new System.Drawing.Size(320, 50);
-            this.newButton_Click.TabIndex = 1;
-            this.newButton_Click.Text = "EDIT";
-            this.newButton_Click.UseVisualStyleBackColor = false;
-            this.newButton_Click.Click += new System.EventHandler(this.button1_Click);
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.editButton.Location = new System.Drawing.Point(882, 185);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(320, 50);
+            this.editButton.TabIndex = 1;
+            this.editButton.Text = "EDIT";
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
-            // saveButton_Click
+            // saveButton
             // 
-            this.saveButton_Click.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.saveButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.saveButton_Click.Location = new System.Drawing.Point(59, 185);
-            this.saveButton_Click.Name = "saveButton_Click";
-            this.saveButton_Click.Size = new System.Drawing.Size(320, 50);
-            this.saveButton_Click.TabIndex = 2;
-            this.saveButton_Click.Text = "SAVE";
-            this.saveButton_Click.UseVisualStyleBackColor = false;
-            this.saveButton_Click.Click += new System.EventHandler(this.button2_Click);
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.saveButton.Location = new System.Drawing.Point(59, 185);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(320, 50);
+            this.saveButton.TabIndex = 2;
+            this.saveButton.Text = "SAVE";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // deleteButton_Click
+            // deleteButton
             // 
-            this.deleteButton_Click.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.deleteButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.deleteButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton_Click.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.deleteButton_Click.Location = new System.Drawing.Point(469, 185);
-            this.deleteButton_Click.Name = "deleteButton_Click";
-            this.deleteButton_Click.Size = new System.Drawing.Size(320, 50);
-            this.deleteButton_Click.TabIndex = 3;
-            this.deleteButton_Click.Text = "DELETE";
-            this.deleteButton_Click.UseVisualStyleBackColor = false;
-            this.deleteButton_Click.Click += new System.EventHandler(this.button3_Click);
+            this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
+            this.deleteButton.Location = new System.Drawing.Point(469, 185);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(320, 50);
+            this.deleteButton.TabIndex = 3;
+            this.deleteButton.Text = "DELETE";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // downloadButton_Click
+            // downloadreportButton
             // 
-            this.downloadButton_Click.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.downloadButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.downloadButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.downloadButton_Click.Location = new System.Drawing.Point(469, 530);
-            this.downloadButton_Click.Name = "downloadButton_Click";
-            this.downloadButton_Click.Size = new System.Drawing.Size(320, 50);
-            this.downloadButton_Click.TabIndex = 4;
-            this.downloadButton_Click.Text = "DOWNLOAD REPORT";
-            this.downloadButton_Click.UseVisualStyleBackColor = false;
-            this.downloadButton_Click.Click += new System.EventHandler(this.button4_Click);
+            this.downloadreportButton.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.downloadreportButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.downloadreportButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadreportButton.Location = new System.Drawing.Point(469, 530);
+            this.downloadreportButton.Name = "downloadreportButton";
+            this.downloadreportButton.Size = new System.Drawing.Size(320, 50);
+            this.downloadreportButton.TabIndex = 4;
+            this.downloadreportButton.Text = "DOWNLOAD REPORT";
+            this.downloadreportButton.UseVisualStyleBackColor = false;
+            this.downloadreportButton.Click += new System.EventHandler(this.downloadreportButton_Click);
             // 
             // nameTextBox
             // 
@@ -273,18 +273,18 @@
             this.quantityNumericUpDown.Text = "Quantity";
             this.quantityNumericUpDown.Click += new System.EventHandler(this.quantityNumericUpDown_Click);
             // 
-            // button1
+            // signoutButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Aqua;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(469, 590);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(320, 50);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "SIGN OUT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.signoutButton.BackColor = System.Drawing.Color.Aqua;
+            this.signoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.signoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signoutButton.Location = new System.Drawing.Point(469, 590);
+            this.signoutButton.Name = "signoutButton";
+            this.signoutButton.Size = new System.Drawing.Size(320, 50);
+            this.signoutButton.TabIndex = 26;
+            this.signoutButton.Text = "SIGN OUT";
+            this.signoutButton.UseVisualStyleBackColor = false;
+            this.signoutButton.Click += new System.EventHandler(this.signoutButton_Click);
             // 
             // InventoTrack
             // 
@@ -293,7 +293,7 @@
             this.BackgroundImage = global::InventoTrack.Properties.Resources.Background_MainPage;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1258, 664);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.signoutButton);
             this.Controls.Add(this.quantityNumericUpDown);
             this.Controls.Add(this.priceNumericUpdown);
             this.Controls.Add(this.categoryBox);
@@ -302,11 +302,11 @@
             this.Controls.Add(this.categoryComboBox);
             this.Controls.Add(this.TextBox1);
             this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.downloadButton_Click);
-            this.Controls.Add(this.deleteButton_Click);
-            this.Controls.Add(this.saveButton_Click);
-            this.Controls.Add(this.newButton_Click);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.downloadreportButton);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.dataGridView);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -314,8 +314,8 @@
             this.Name = "InventoTrack";
             this.Text = "InventoTrack";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.InventoTrack_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNUD)).EndInit();
             this.ResumeLayout(false);
@@ -325,11 +325,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button newButton_Click;
-        private System.Windows.Forms.Button saveButton_Click;
-        private System.Windows.Forms.Button deleteButton_Click;
-        private System.Windows.Forms.Button downloadButton_Click;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button downloadreportButton;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label TextBox1;
         private System.Windows.Forms.ComboBox categoryComboBox;
@@ -338,7 +338,7 @@
         private System.Windows.Forms.Label categoryBox;
         private System.Windows.Forms.Label priceNumericUpdown;
         private System.Windows.Forms.Label quantityNumericUpDown;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button signoutButton;
     }
 }
 

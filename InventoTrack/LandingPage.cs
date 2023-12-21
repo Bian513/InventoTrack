@@ -28,12 +28,11 @@ namespace InventoTrack
         {
 
         }
-
-        private void newButton(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
-            
+
             try
             {
                 bool isCanLogin = Users.checkUserLogin(username, password);
@@ -43,27 +42,34 @@ namespace InventoTrack
                 }
                 string email = Users.getEmail(username, password);
                 int id = Users.getUserId(email);
-                MessageBox.Show($"Log in Success, welcome {id},{username},{email},{password}");
+                MessageBox.Show($"Log in Success, welcome {username}");
                 this.Hide();
                 InventoTrack inventoTrack = new InventoTrack(id, username, email, password);
                 inventoTrack.Show();
-                }
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
 
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        private void createaccountButton_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            RegisterPage registerpage = new RegisterPage();
+            registerpage.Show();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void resetpasswordLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             ResetPassword resetpassword = new ResetPassword();
             resetpassword.Show();
+        }
+
+        private void usernameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,13 +92,5 @@ namespace InventoTrack
 
         }
 
-        
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            RegisterPage registerpage = new RegisterPage();
-            registerpage.Show();
-        }
     }
 }

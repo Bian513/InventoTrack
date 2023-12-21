@@ -25,7 +25,7 @@ namespace InventoTrack
             users = new Users(userId,userName, userEmail, userPassword);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void InventoTrack_Load(object sender, EventArgs e)
         {
             connection.Open();
             SqlCommand selectAll = new SqlCommand("SELECT * FROM items", connection);
@@ -35,38 +35,37 @@ namespace InventoTrack
             {
                 BindingSource source = new BindingSource();
                 source.DataSource = reader;
-                dataGridView1.DataSource = source;
-                deleteButton_Click.Show();
-                newButton_Click.Show();
-                downloadButton_Click.Show();
+                dataGridView.DataSource = source;
+                deleteButton.Show();
+                editButton.Show();
+                downloadreportButton.Show();
 
             }
             else
             {
-                dataGridView1.DataSource = null;
-                deleteButton_Click.Hide();
-                newButton_Click.Hide();
-                downloadButton_Click.Hide();
+                dataGridView.DataSource = null;
+                deleteButton.Hide();
+                editButton.Hide();
+                downloadreportButton.Hide();
             }
-            
+
             connection.Close();
-            
+
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                
+
             }
             catch (Exception err)
             {
                 Console.WriteLine("There has been an error: " + err);
             }
-
         }
 
-        //EDIT BUTTON
-        private void button1_Click(object sender, EventArgs e)
+        private void editButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -74,9 +73,9 @@ namespace InventoTrack
                 String category = categoryComboBox.Text;
                 string price = priceNUD.Text;
                 string quantity = quantityNUD.Text;
-                int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+                int id = int.Parse(dataGridView.Rows[int.Parse(dataGridView.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
                 users.updateItem(id, name, category, price, quantity);
-                Form1_Load(sender, e);
+                InventoTrack_Load(sender, e);
                 nameTextBox.Text = "";
                 categoryComboBox.Text = "";
                 priceNUD.Text = "0";
@@ -88,17 +87,16 @@ namespace InventoTrack
             }
         }
 
-        //SAVE BUTTON
-        private void button2_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
             String name = nameTextBox.Text;
             String category = categoryComboBox.Text;
-            string price = priceNUD.Text;    
+            string price = priceNUD.Text;
             string quantity = quantityNUD.Text;
 
-            
 
-            if (nameTextBox.Text== "")
+
+            if (nameTextBox.Text == "")
             {
                 MessageBox.Show("Please enter a name for the item");
             }
@@ -117,7 +115,7 @@ namespace InventoTrack
             else
             {
                 users.addItem(name, category, price, quantity);
-                Form1_Load(sender, e);
+                InventoTrack_Load(sender, e);
                 nameTextBox.Text = "";
                 categoryComboBox.Text = "";
                 priceNUD.Text = "0";
@@ -125,23 +123,21 @@ namespace InventoTrack
             }
         }
 
-        //DELETE BUTTON
-        private void button3_Click(object sender, EventArgs e)
+        private void deleteButton_Click(object sender, EventArgs e)
         {
             try
             {
-                int id = int.Parse(dataGridView1.Rows[int.Parse(dataGridView1.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
+                int id = int.Parse(dataGridView.Rows[int.Parse(dataGridView.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
                 users.deleteItem(id);
-                Form1_Load(sender, e);
+                InventoTrack_Load(sender, e);
             }
             catch (Exception err)
             {
                 Console.WriteLine("Error: " + err);
             }
-
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void downloadreportButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -152,8 +148,18 @@ namespace InventoTrack
             {
                 MessageBox.Show(err.Message);
             }
-
         }
+
+        private void signoutButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Berhasil Keluar");
+            this.Hide();
+            LandingPage landingpage = new LandingPage();
+            landingpage.Show();
+        }
+
+
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -211,12 +217,5 @@ namespace InventoTrack
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            MessageBox.Show("Berhasil Keluar");
-            this.Hide();
-            LandingPage landingpage = new LandingPage();
-            landingpage.Show();
-        }
     }
 }

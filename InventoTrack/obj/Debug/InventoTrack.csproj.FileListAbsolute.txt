@@ -296,7 +296,6 @@ C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\Inven
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LandingPage.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Properties.Resources.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterPage.resources
-C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Report.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.ResetPassword.resources
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.GenerateResource.cache
 C:\Users\hp\source\repos\Invento Track\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CoreCompileInputs.cache
