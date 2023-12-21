@@ -28,9 +28,7 @@ namespace InventoTrack
         private void InventoTrack_Load(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand selectAll = new SqlCommand("SELECT * FROM items", connection);
-            selectAll.ExecuteNonQuery();
-            SqlDataReader reader = selectAll.ExecuteReader();
+            SqlDataReader reader = users.selectAllItems(connection);
             if (reader.HasRows)
             {
                 BindingSource source = new BindingSource();
@@ -48,9 +46,7 @@ namespace InventoTrack
                 editButton.Hide();
                 downloadreportButton.Hide();
             }
-
             connection.Close();
-
         }
 
         private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -69,8 +65,8 @@ namespace InventoTrack
         {
             try
             {
-                String name = nameTextBox.Text;
-                String category = categoryComboBox.Text;
+                string name = nameTextBox.Text;
+                string category = categoryComboBox.Text;
                 string price = priceNUD.Text;
                 string quantity = quantityNUD.Text;
                 int id = int.Parse(dataGridView.Rows[int.Parse(dataGridView.CurrentCell.RowIndex.ToString())].Cells[0].Value.ToString());
@@ -89,7 +85,7 @@ namespace InventoTrack
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            String name = nameTextBox.Text;
+            string name = nameTextBox.Text;
             String category = categoryComboBox.Text;
             string price = priceNUD.Text;
             string quantity = quantityNUD.Text;
@@ -173,49 +169,30 @@ namespace InventoTrack
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
-
         }
-
         private void label4_Click(object sender, EventArgs e)
         {
-
         }
-
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-
         }
-
         private void label2_Click_1(object sender, EventArgs e)
         {
-
         }
-
-
         private void priceNumericUpdown_Click(object sender, EventArgs e)
         {
-
         }
-
         private void quantityNUD_ValueChanged(object sender, EventArgs e)
         {
-
         }
-
         private void quantityNumericUpDown_Click(object sender, EventArgs e)
         {
-
         }
-
         private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
-
     }
 }

@@ -31,31 +31,21 @@ namespace InventoTrack
             {
                 try
                 {
-                    string connectionString = "Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
-                    SqlConnection connection = new SqlConnection(connectionString);
-                    connection.Open();
-                    string commandString = "SELECT dbo.CheckUserLogin(@Username, @Password);";
-                    SqlCommand command = new SqlCommand(commandString, connection);
-                    command.Parameters.AddWithValue("@Username", username);
-                    command.Parameters.AddWithValue("@Password", password);
+                    SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
+                    Person.openConnection(connection);
+                    bool isCanRegist = Person.checkUserLogin(username, password, connection);
 
 
-                    if ((bool)command.ExecuteScalar() == true)
+                    if (isCanRegist == true)
                     {
-                        connection.Close();
+                        Person.closeConnection(connection);
                         throw new Exception("Account Has Been Created");
 
                     }
                     else
                     {
-                        string insertString = "INSERT INTO users (username, email, password) VALUES (@Username, @Email, @Password)";
-                        SqlCommand insertCommand = new SqlCommand(insertString, connection);
-                        insertCommand.Parameters.AddWithValue("@Username", username);
-                        insertCommand.Parameters.AddWithValue("@Email", email);
-                        insertCommand.Parameters.AddWithValue("@Password", password);
-                        insertCommand.ExecuteNonQuery();
-                        MessageBox.Show($"Register Success, welcome {username} Please Login");
-                        connection.Close();
+                        Person.registUser(username, email, password, connection);
+                        Person.closeConnection(connection);
                         LandingPage landingPage = new LandingPage();
                         landingPage.Show();
                         this.Close();

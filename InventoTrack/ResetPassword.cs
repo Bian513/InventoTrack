@@ -16,6 +16,7 @@ namespace InventoTrack
 {
     public partial class ResetPassword : Form
     {
+        SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
         string randomCode;
         public ResetPassword()
         {
@@ -42,7 +43,9 @@ namespace InventoTrack
                 {
                     try
                     {
-                        Person.updatePassword(email, password);
+                        Person.openConnection(connection);
+                        Person.updatePassword(email, password, connection);
+                        Person.closeConnection(connection);
                         LandingPage landingPage = new LandingPage();
                         landingPage.Show();
                         this.Hide();

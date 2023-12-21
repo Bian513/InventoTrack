@@ -15,6 +15,7 @@ namespace InventoTrack
 {
     public partial class LandingPage : Form
     {
+        SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
         public LandingPage()
         {
             InitializeComponent();
@@ -32,13 +33,15 @@ namespace InventoTrack
 
             try
             {
-                bool isCanLogin = Person.checkUserLogin(username, password);
+                Person.openConnection(connection);
+                bool isCanLogin = Person.checkUserLogin(username, password, connection);
                 if (isCanLogin != true)
                 {
                     throw new Exception("Error Loggin in");
                 }
-                string email = Person.getEmail(username, password);
-                int id = Person.getUserId(email);
+                string email = Person.getEmail(username, password, connection);
+                int id = Person.getUserId(email, connection);
+                Person.closeConnection(connection);
                 MessageBox.Show($"Log in Success, welcome {username}");
                 this.Hide();
                 InventoTrack inventoTrack = new InventoTrack(id, username, email, password);
