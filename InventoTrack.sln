@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoTrack", "InventoTrack\InventoTrack.csproj", "{550CDC9C-EB94-417B-B933-064F3E909DA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoTrackTest", "InventoTrackTest\InventoTrackTest.csproj", "{E9563406-F1EA-4332-999D-5F3233E31E62}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{550CDC9C-EB94-417B-B933-064F3E909DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{550CDC9C-EB94-417B-B933-064F3E909DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{550CDC9C-EB94-417B-B933-064F3E909DA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9563406-F1EA-4332-999D-5F3233E31E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9563406-F1EA-4332-999D-5F3233E31E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9563406-F1EA-4332-999D-5F3233E31E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9563406-F1EA-4332-999D-5F3233E31E62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
