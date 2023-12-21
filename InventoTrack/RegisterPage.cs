@@ -82,7 +82,7 @@ namespace InventoTrack
             {
                 Random rand = new Random();
                 randomCode = (rand.Next(999999)).ToString();
-                Users.sendOTP(email, randomCode);
+                Person.sendOTP(email, randomCode);
             }
             catch
             {

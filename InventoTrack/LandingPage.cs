@@ -15,9 +15,6 @@ namespace InventoTrack
 {
     public partial class LandingPage : Form
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
-
         public LandingPage()
         {
             InitializeComponent();
@@ -35,13 +32,13 @@ namespace InventoTrack
 
             try
             {
-                bool isCanLogin = Users.checkUserLogin(username, password);
+                bool isCanLogin = Person.checkUserLogin(username, password);
                 if (isCanLogin != true)
                 {
                     throw new Exception("Error Loggin in");
                 }
-                string email = Users.getEmail(username, password);
-                int id = Users.getUserId(email);
+                string email = Person.getEmail(username, password);
+                int id = Person.getUserId(email);
                 MessageBox.Show($"Log in Success, welcome {username}");
                 this.Hide();
                 InventoTrack inventoTrack = new InventoTrack(id, username, email, password);

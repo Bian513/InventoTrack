@@ -248,7 +248,6 @@ C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Inve
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LandingPage.resources
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Properties.Resources.resources
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.RegisterPage.resources
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Report.resources
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.ResetPassword.resources
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.GenerateResource.cache
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.CoreCompileInputs.cache

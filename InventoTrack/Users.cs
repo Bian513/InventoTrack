@@ -14,26 +14,25 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace InventoTrack
+
 {
-    public class Users
+    internal class Person
     {
+        public Person() { }
         public int Id { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public Users() { }
-        public Users(int id, string username, string email, string password)
+        public Person(int id, string username, string email, string password)
         {
             Id = id;
             Username = username;
             Email = email;
             Password = password;
         }
-
         public static void sendOTP(string email, string randomCode)
         {
-            String from, pass, messageBody, to;
-            to = email;
+            String from, pass, messageBody;
             from = "inventotrack@gmail.com";
             pass = "nrig zldn uoge jwhc";
             SmtpClient smtp = new SmtpClient("smtp.gmail.com");
@@ -44,7 +43,7 @@ namespace InventoTrack
 
             MailMessage message = new MailMessage();
             messageBody = "Terimakasih telah mencoba mendaftar di aplikasi InventoTrack, berikut merupakan kode OTP: " + randomCode;
-            message.To.Add(to);
+            message.To.Add(email);
             message.From = new MailAddress(from);
             message.Body = messageBody;
             message.Subject = "Kode Verifikasi OTP";
@@ -55,12 +54,11 @@ namespace InventoTrack
         {
             SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
             connection.Open();
-            string commandString = "UPDATE users SET password = @password WHERE email = @email;";
-            SqlCommand updatePw = new SqlCommand(commandString, connection);
-            updatePw.Parameters.AddWithValue("@email", email);
-            updatePw.Parameters.AddWithValue("@Password", password);
-            updatePw.ExecuteNonQuery();
-            MessageBox.Show("Password has been reset, Please Login");
+            SqlCommand updatePasswordCmd = new SqlCommand("UPDATE users SET password = @password WHERE email = @email;", connection);
+            updatePasswordCmd.Parameters.AddWithValue("@email", email);
+            updatePasswordCmd.Parameters.AddWithValue("@Password", password);
+            updatePasswordCmd.ExecuteNonQuery();
+            MessageBox.Show("Password has been reset, Please Login again");
             connection.Close();
         }
         public static string getEmail(string username, string password)
@@ -92,34 +90,52 @@ namespace InventoTrack
             cul.Parameters.AddWithValue("@Username", username);
             cul.Parameters.AddWithValue("@Password", password);
             bool isCanLogin = (bool)cul.ExecuteScalar();
-
             connection.Close();
             return isCanLogin;
         }
+    }
+    internal class Users
+    {
+        public Person personDetail { get; set; }
+        public Users() { }
+        public Users(int id, string username, string email, string password)
+        {
+            personDetail = new Person(id, username, email, password);
+        }
 
-        public void addItem(string name, string category, string price, string quantity)
+        
+        
+        public int checkItem(string name)
         {
             SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
             connection.Open();
-            SqlCommand checkName = new SqlCommand("SELECT COUNT(*) FROM items WHERE name = @name;", connection);
-            checkName.Parameters.AddWithValue("@name", name);
-            int count = (int)checkName.ExecuteScalar();
+            SqlCommand checkNameCmd = new SqlCommand("SELECT COUNT(*) FROM items WHERE name = @name;", connection);
+            checkNameCmd.Parameters.AddWithValue("@name", name);
+            int count = (int)checkNameCmd.ExecuteScalar();
+            connection.Close();
+            return count;
+        }
+        public void addItem(string name, string category, string price, string quantity)
+        {
+            int count = this.checkItem(name);
+            SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
             if (count > 0)
             {
                 MessageBox.Show("Product has already exist, you can edit the product or change the name of product");
             }
             else
             {
-                string commandString = "INSERT INTO items (name, category, price, quantity) VALUES (@name, @category, @price, @quantity);";
-                SqlCommand command = new SqlCommand(commandString, connection);
-                command.Parameters.AddWithValue("@name", name);
-                command.Parameters.AddWithValue("@category", category);
-                command.Parameters.AddWithValue("@price", int.Parse(price));
-                command.Parameters.AddWithValue("@quantity", int.Parse(quantity));
-                command.ExecuteNonQuery();
+                connection.Open();
+                SqlCommand insertItemCmd = new SqlCommand("INSERT INTO items (name, category, price, quantity) VALUES (@name, @category, @price, @quantity);", connection);
+                insertItemCmd.Parameters.AddWithValue("@name", name);
+                insertItemCmd.Parameters.AddWithValue("@category", category);
+                insertItemCmd.Parameters.AddWithValue("@price", int.Parse(price));
+                insertItemCmd.Parameters.AddWithValue("@quantity", int.Parse(quantity));
+                insertItemCmd.ExecuteNonQuery();
+                connection.Close();
             }
-            connection.Close();
         }
+
         public void updateItem(int id, string name, string category, string price, string quantity)
         {
             SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");

@@ -27,7 +27,7 @@ namespace InventoTrack
             string email = usernameTextBox.Text;
             Random rand = new Random();
             randomCode = (rand.Next(999999)).ToString();
-            Users.sendOTP(email, randomCode);
+            Person.sendOTP(email, randomCode);
         }
 
         private void resetpasswordButton_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace InventoTrack
                 {
                     try
                     {
-                        Users.updatePassword(email, password);
+                        Person.updatePassword(email, password);
                         LandingPage landingPage = new LandingPage();
                         landingPage.Show();
                         this.Hide();
