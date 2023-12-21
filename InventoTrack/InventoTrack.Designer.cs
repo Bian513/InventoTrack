@@ -33,7 +33,7 @@
             this.newButton_Click = new System.Windows.Forms.Button();
             this.saveButton_Click = new System.Windows.Forms.Button();
             this.deleteButton_Click = new System.Windows.Forms.Button();
-            this.updateButton_Click = new System.Windows.Forms.Button();
+            this.downloadButton_Click = new System.Windows.Forms.Button();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.TextBox1 = new System.Windows.Forms.Label();
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
@@ -107,18 +107,18 @@
             this.deleteButton_Click.UseVisualStyleBackColor = false;
             this.deleteButton_Click.Click += new System.EventHandler(this.button3_Click);
             // 
-            // updateButton_Click
+            // downloadButton_Click
             // 
-            this.updateButton_Click.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.updateButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.updateButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton_Click.Location = new System.Drawing.Point(469, 530);
-            this.updateButton_Click.Name = "updateButton_Click";
-            this.updateButton_Click.Size = new System.Drawing.Size(320, 50);
-            this.updateButton_Click.TabIndex = 4;
-            this.updateButton_Click.Text = "DOWNLOAD REPORT";
-            this.updateButton_Click.UseVisualStyleBackColor = false;
-            this.updateButton_Click.Click += new System.EventHandler(this.button4_Click);
+            this.downloadButton_Click.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.downloadButton_Click.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.downloadButton_Click.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.downloadButton_Click.Location = new System.Drawing.Point(469, 530);
+            this.downloadButton_Click.Name = "downloadButton_Click";
+            this.downloadButton_Click.Size = new System.Drawing.Size(320, 50);
+            this.downloadButton_Click.TabIndex = 4;
+            this.downloadButton_Click.Text = "DOWNLOAD REPORT";
+            this.downloadButton_Click.UseVisualStyleBackColor = false;
+            this.downloadButton_Click.Click += new System.EventHandler(this.button4_Click);
             // 
             // nameTextBox
             // 
@@ -302,7 +302,7 @@
             this.Controls.Add(this.categoryComboBox);
             this.Controls.Add(this.TextBox1);
             this.Controls.Add(this.nameTextBox);
-            this.Controls.Add(this.updateButton_Click);
+            this.Controls.Add(this.downloadButton_Click);
             this.Controls.Add(this.deleteButton_Click);
             this.Controls.Add(this.saveButton_Click);
             this.Controls.Add(this.newButton_Click);
@@ -329,7 +329,7 @@
         private System.Windows.Forms.Button newButton_Click;
         private System.Windows.Forms.Button saveButton_Click;
         private System.Windows.Forms.Button deleteButton_Click;
-        private System.Windows.Forms.Button updateButton_Click;
+        private System.Windows.Forms.Button downloadButton_Click;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label TextBox1;
         private System.Windows.Forms.ComboBox categoryComboBox;

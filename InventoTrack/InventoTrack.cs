@@ -38,12 +38,15 @@ namespace InventoTrack
                 dataGridView1.DataSource = source;
                 deleteButton_Click.Show();
                 newButton_Click.Show();
+                downloadButton_Click.Show();
+
             }
             else
             {
                 dataGridView1.DataSource = null;
                 deleteButton_Click.Hide();
                 newButton_Click.Hide();
+                downloadButton_Click.Hide();
             }
             
             connection.Close();
