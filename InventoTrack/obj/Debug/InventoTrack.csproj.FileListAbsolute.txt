@@ -214,7 +214,6 @@ C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\InventoTrack.exe.
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.HashCode.dll
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Npgsql.dll
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Buffers.dll
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Collections.Immutable.dll
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Diagnostics.DiagnosticSource.dll
@@ -229,7 +228,6 @@ C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.ValueTuple
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Bcl.HashCode.xml
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\Npgsql.xml
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Buffers.xml
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Collections.Immutable.xml
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Diagnostics.DiagnosticSource.xml
@@ -242,8 +240,6 @@ C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\bin\Debug\System.ValueTuple.xml
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.AssemblyReference.cache
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.csproj.SuggestedBindingRedirects.cache
-C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.exe.config
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.InventoTrack.resources
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.LandingPage.resources
 C:\Users\ACER\Source\Repos\InventoTrack\InventoTrack\obj\Debug\InventoTrack.Properties.Resources.resources
