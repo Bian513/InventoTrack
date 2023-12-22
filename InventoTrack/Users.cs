@@ -19,7 +19,6 @@ namespace InventoTrack
 {
     internal class Person
     {
-        public Person() { }
         public int Id { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }

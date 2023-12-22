@@ -155,14 +155,6 @@ namespace InventoTrack
             landingpage.Show();
         }
 
-
-        
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -171,29 +163,30 @@ namespace InventoTrack
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-        }
-        private void label4_Click(object sender, EventArgs e)
-        {
-        }
+        
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
+
         }
         private void label2_Click_1(object sender, EventArgs e)
         {
+
         }
         private void priceNumericUpdown_Click(object sender, EventArgs e)
         {
+
         }
         private void quantityNUD_ValueChanged(object sender, EventArgs e)
         {
+
         }
         private void quantityNumericUpDown_Click(object sender, EventArgs e)
         {
+
         }
         private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+
         }
     }
 }
