@@ -26,9 +26,16 @@ namespace InventoTrack
         private void sendotpButton_Click(object sender, EventArgs e)
         {
             string email = usernameTextBox.Text;
-            Random rand = new Random();
-            randomCode = (rand.Next(999999)).ToString();
-            Person.sendOTP(email, randomCode);
+            try
+            {
+                Random rand = new Random();
+                randomCode = (rand.Next(999999)).ToString();
+                Person.sendOTP(email, randomCode);
+            }
+            catch
+            {
+                MessageBox.Show("Isi email terlebih dahulu");
+            }
         }
 
         private void resetpasswordButton_Click(object sender, EventArgs e)
