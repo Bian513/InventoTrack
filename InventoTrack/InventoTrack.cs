@@ -110,7 +110,8 @@ namespace InventoTrack
             }
             else
             {
-                users.addItem(name, category, price, quantity);
+                int count = users.checkItem(name);
+                users.addItem(name, category, price, quantity, count);
                 InventoTrack_Load(sender, e);
                 nameTextBox.Text = "";
                 categoryComboBox.Text = "";

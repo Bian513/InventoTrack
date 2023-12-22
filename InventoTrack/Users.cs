@@ -127,9 +127,8 @@ namespace InventoTrack
             connection.Close();
             return count;
         }
-        public void addItem(string name, string category, string price, string quantity)
+        public void addItem(string name, string category, string price, string quantity, int count)
         {
-            int count = this.checkItem(name);
             SqlConnection connection = new SqlConnection("Server=tcp:inventotrackserver.database.windows.net,1433;Initial Catalog=inventotrackDB;Persist Security Info=False;User ID=admin1;Password=It123456;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
             if (count > 0)
             {
